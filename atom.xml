@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-04-03T09:08:11.606Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库系统概述 一</title>
+    <link href="http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/"/>
+    <id>http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/</id>
+    <published>2020-04-03T09:02:21.868Z</published>
+    <updated>2020-04-03T09:08:11.606Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h1><a id="more"></a><h2 id="基本知识与关系模型"><a href="#基本知识与关系模型" class="headerlink" title="基本知识与关系模型"></a>基本知识与关系模型</h2><h3 id="初步认识数据库系统"><a href="#初步认识数据库系统" class="headerlink" title="初步认识数据库系统"></a>初步认识数据库系统</h3><p>该部分的重难点</p><pre><code>* 一组概念的区分：数据库、数据库系统和数据库管理系统* 熟悉“表”的相关要素及术语* 熟悉数据库系统的构成（工作环境）* 了解数据库管理系统的功能：用户和系统角度</code></pre><ul><li><p>为什么要学习数据库系统</p></li><li><p>什么是数据库</p><ul><li><strong>数据库是电子化信息扥集合</strong></li><li>数据库起源于规范化“表”的处理</li><li>基于“表”的数据库的影响</li><li>对“表”的抽象：<strong>理解-区分-命名-表达</strong></li><li>数据库相互之间有关联关系的table的集合</li></ul></li><li><p>什么是数据库系统</p><ul><li>数据库系统的构成-概念层次<ul><li>数据库</li><li>数据库管理系统</li><li>数据库应用</li><li>数据库管理员</li><li>计算机基本系统</li></ul></li><li>数据库系统的构成-实例层次</li></ul></li><li><p>什么是数据库管理系统&lt;如何利用&gt;</p><ul><li><p>用户角度</p><pre><code>* 数据库定义：用户通过**数据定义语言&lt;DDL&gt;**定义数据库中table的名称，标题* 数据库操纵：用户通过**数据操纵语言&lt;DML&gt;**对数据库中的表进行增删改查* 数据库控制：用户通过**数据控制语言&lt;DCL&gt;**控制数据库中数据的使用——哪些用户可以用，哪些不能用* 数据库维护：数据库管理系统&lt;DBMS&gt;提供一系列程序给用户，从而对数据库进行维护</code></pre></li><li><p>数据库语言</p><ul><li><p>SQL语言</p><pre><code>* 数据定义语言* 数据操纵语言* 数据控制语言</code></pre><ul><li>数据库语言与高级语言</li></ul></li></ul></li><li><p>系统角度</p></li></ul></li></ul><h3 id="数据库系统的结构抽象与演变"><a href="#数据库系统的结构抽象与演变" class="headerlink" title="数据库系统的结构抽象与演变"></a>数据库系统的结构抽象与演变</h3><p>该部分的重难点</p><pre><code>* 一组概念的区分：三级模式两层映像，物理独立性和逻辑独立性* 一组概念的区分：数据→模式→数据模型* 几种数据模型的差异：网状/层次模型→关系模型→oo数据模型</code></pre><ul><li>数据库系统的标准结构</li><li>数据模型</li><li>数据库系统的演变与发展<h2 id="数据库语言-SQL"><a href="#数据库语言-SQL" class="headerlink" title="数据库语言-SQL"></a>数据库语言-SQL</h2><h2 id="数据建模与数据库设计"><a href="#数据建模与数据库设计" class="headerlink" title="数据建模与数据库设计"></a>数据建模与数据库设计</h2><h2 id="数据库管理系统实现技术"><a href="#数据库管理系统实现技术" class="headerlink" title="数据库管理系统实现技术"></a>数据库管理系统实现技术</h2></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;数据库系统&quot;&gt;&lt;a href=&quot;#数据库系统&quot; class=&quot;headerlink&quot; title=&quot;数据库系统&quot;&gt;&lt;/a&gt;数据库系统&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端入门</title>
+    <link href="http://yoursite.com/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/"/>
+    <id>http://yoursite.com/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/</id>
+    <published>2020-04-03T09:02:21.861Z</published>
+    <updated>2020-04-01T05:01:41.389Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端入门-HTML-amp-CSS-学习"><a href="#前端入门-HTML-amp-CSS-学习" class="headerlink" title="前端入门 HTML&amp;CSS 学习"></a>前端入门 HTML&amp;CSS 学习</h1><a id="more"></a><h2 id="HTML入门教程"><a href="#HTML入门教程" class="headerlink" title="HTML入门教程"></a>HTML入门教程</h2><p>在网页中HTML专门负责网页的结构</p><h3 id="HTML编辑器"><a href="#HTML编辑器" class="headerlink" title="HTML编辑器"></a>HTML编辑器</h3><p>nodepad++，推荐使用vscode。<br>将vscode翻译成中文界面，下载插件Chinese</p><h3 id="HTML基础结构"><a href="#HTML基础结构" class="headerlink" title="HTML基础结构"></a>HTML基础结构</h3><pre><code>&lt;!doctype&amp;nbsp;html&gt;文档声明 &lt;html&gt;    &lt;head&gt;帮助浏览器或者搜索引擎解析网页        &lt;meta&gt;        &lt;title&gt;网页的标题&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        网页显示内容    &lt;/body&gt; &lt;/html&gt;</code></pre><p>   <strong>以上是网页的基本结构</strong></p><h3 id="HTML-在-lt-head-gt-内的标签"><a href="#HTML-在-lt-head-gt-内的标签" class="headerlink" title="HTML 在<head>内的标签"></a>HTML 在&lt;head&gt;内的标签</h3><ul><li><p>&lt;meta&gt;用来设置网页的元数据</p><ul><li><p>charset 指定网页的字符</p></li><li><p>name 指定的数据的名称 </p><p>&lt;keywords 表示网页的关键字&gt;<br>&lt;description 用于网站的指定描述&gt;<br><strong>具体详情查阅HTML手册</strong></p></li><li><p>content 指定的数据内容 <br></p></li></ul></li><li><p>&lt;title&gt;网页的标题&lt;/title&gt;显示在浏览器的搜索栏，根据title判断网页内容</p><h3 id="HTML-在-lt-body-gt-内的标签"><a href="#HTML-在-lt-body-gt-内的标签" class="headerlink" title="HTML 在<body>内的标签"></a>HTML 在&lt;body&gt;内的标签</h3><p>&lt;body&gt;表示网页的主体，网页所有可见的内容都应该写在body</p></li><li><p>自结束标签<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像&lt;img&gt;，&lt;imput&gt;</p></li><li><p>注释：&lt;!– 注释内容 –&gt;</p></li><li><p>标签属性：在标签中（开始标签或自结束标签）可以设置属性<br>属性是一个名值对（x=”y”或’y’）&lt;font&nbsp;&nbsp;x=”y”&gt;需要改变属性的内容&lt;/font&gt;&nbsp;&nbsp;x是名，y是值</p></li><li><p>实体语法 &lt;在网页中编写特殊符时会出现问题&gt;</p><p>  实体的名字;</p></li><li><p>语义化标签(1)：&lt;一般来说在块元素里面放行内元素&gt;</p><ul><li><p>块元素：对网页进行布局，在页面中独占一行的标签<br>&lt;p&gt;标签在页面中表示一个段落，<strong>p标签中不能放任何块元素</strong><br>&lt;hgroup&gt;标签为标题组，可以存放一组相关的标题</p></li><li><p>行内元素：用来包裹文字在页面中不会独占一行<br>&lt;em&gt;标签表示语音语调的加重<br>&lt;strong&gt;表示强调重要内容</p></li></ul></li><li><p>语义化标签（2）：结构化语义标签<br>  &lt;header&gt;表示网页的头部，<strong>可以有多个</strong><br>  &lt;main&gt;表示网页的主体，<strong>只能有一个</strong><br>  &lt;foot&gt;表示网页的底部<br>  &lt;nav&gt;表示网页的导航<br>  &lt;aside&gt;和主题相关的内容（侧边栏）<br>  &lt;artice&gt;表示一个独立文章<br>  &lt;section&gt;表示一个独立的区块</p><pre><code>**div 没有语义，就表示一个区块，目前主要的布局元素span没有任何语义，一般用来选中文字** </code></pre></li><li><p>语义化标签（3）：列表（list）列表之间可以相互嵌套</p><ul><li><p>有序列表</p><p>&lt;ui&gt;&lt;/ui&gt;创建</p></li><li><p>无序列表</p><p>&lt;oi&gt;&lt;/oi&gt;创建</p></li><li><p>定义列表</p><p>&lt;dl&gt;&lt;/dl&gt;创建<br>&lt;dt&gt;&lt;/dt&gt;定义到内容<br>&lt;dd&gt;&lt;/dd&gt;对内容进行解释说明</p></li><li><p>超链接：从当前页面跳转到其他页面或者当前页面的其他位置,<strong>在标签中可以除它外的人和元素</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;&lt;/a&gt;定义超链接<br>&nbsp;&nbsp;&nbsp;&nbsp;href属性 指定跳转路径，<strong>相对路径绝对路径</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将href属性设置为#回到网页顶部，底部的设计利用id属性<br>&nbsp;&nbsp;&nbsp;&nbsp;id属性 元素的唯一标识，在同一个不能重复出现id属性<br>&nbsp;&nbsp;&nbsp;&nbsp;target属性，用来指定超链接打开的位置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可选值：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_self 默认值在当前页面打开超链接。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_blank 在一个新的页面打开超链接。</p></li><li><p>图片标签：用于向当前页面引入一个外部图片<br><strong>img属性替换元素，具有块元素和行内元素的特点</strong></p><ul><li>使用img标签引入，img是自结束标签<br>属性&nbsp;&nbsp;&nbsp;&nbsp;src属性指定外部图片路径<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt属性图片描述搜索引擎根据alt内容识别图片<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width,height属性</li><li>图片的格式</li></ul></li></ul></li></ul><ul><li><p>内联框架：用于向当前界面引入一个其他页面</p><ul><li>使用&lt;iframe&gt;&lt;/iframe&gt;标签<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; src属性指定引入网页属性<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frameborder属性指定内联框架的边框</li></ul></li><li><p>音视频：</p><ul><li>audio标签引入外部音频<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;controls属性是否允许用户控制播放<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aotoplayer属性是否允许自动播放，<strong>大部分浏览器都不会自动对音乐进行播放</strong></li></ul></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端入门-HTML-amp-CSS-学习&quot;&gt;&lt;a href=&quot;#前端入门-HTML-amp-CSS-学习&quot; class=&quot;headerlink&quot; title=&quot;前端入门 HTML&amp;amp;CSS 学习&quot;&gt;&lt;/a&gt;前端入门 HTML&amp;amp;CSS 学习&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java学习</title>
+    <link href="http://yoursite.com/2020/04/03/Java%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2020/04/03/Java%E5%AD%A6%E4%B9%A0/</id>
+    <published>2020-04-03T09:02:21.839Z</published>
+    <updated>2020-04-02T00:45:45.196Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="java-学习"><a href="#java-学习" class="headerlink" title="java 学习"></a>java 学习</h2><h3 id="Java程序的安装"><a href="#Java程序的安装" class="headerlink" title="Java程序的安装"></a>Java程序的安装</h3><h3 id="Java语法"><a href="#Java语法" class="headerlink" title="Java语法"></a>Java语法</h3><h4 id="Java的基本语法"><a href="#Java的基本语法" class="headerlink" title="Java的基本语法"></a>Java的基本语法</h4><ul><li><p>注释</p></li><li><p>标识符</p><pre><code>通用规范</code></pre></li></ul><h4 id="Java中的变量与常量"><a href="#Java中的变量与常量" class="headerlink" title="Java中的变量与常量"></a>Java中的变量与常量</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;java-学习&quot;&gt;&lt;a href=&quot;#java-学习&quot; class=&quot;headerlink&quot; title=&quot;java 学习&quot;&gt;&lt;/a&gt;java 学习&lt;/h2&gt;&lt;h3 id=&quot;Java程序的安装&quot;&gt;&lt;a href=&quot;#Java程序的安装&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库作业踩的坑</title>
+    <link href="http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/</id>
+    <published>2020-04-03T09:02:21.812Z</published>
+    <updated>2020-04-01T05:01:54.229Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一次数据库作业踩的坑"><a href="#第一次数据库作业踩的坑" class="headerlink" title="第一次数据库作业踩的坑"></a>第一次数据库作业踩的坑</h1><p>作业要求：创建数据库，并在数据库中创建数据表，用SQL命令修改表的结构，将数据插入到表中，并完成SQL查询。</p><a id="more"></a><h2 id="一、启动服务"><a href="#一、启动服务" class="headerlink" title="一、启动服务"></a>一、启动服务</h2><ul><li>管理员授权 Windows，不然会启动失败</li><li>用 mysql -uroot -p密码</li></ul><h2 id="二、创建数据表"><a href="#二、创建数据表" class="headerlink" title="二、创建数据表"></a>二、创建数据表</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="2.png" alt="](1.png)&nbsp; &nbsp; ![" title="">                </div>                <div class="image-caption">](1.png)&nbsp; &nbsp; ![</div>            </figure><p>最后一个字段不能加‘，’</p><h2 id="三、用SQL命令修改表的结构"><a href="#三、用SQL命令修改表的结构" class="headerlink" title="三、用SQL命令修改表的结构"></a>三、用SQL命令修改表的结构</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;第一次数据库作业踩的坑&quot;&gt;&lt;a href=&quot;#第一次数据库作业踩的坑&quot; class=&quot;headerlink&quot; title=&quot;第一次数据库作业踩的坑&quot;&gt;&lt;/a&gt;第一次数据库作业踩的坑&lt;/h1&gt;&lt;p&gt;作业要求：创建数据库，并在数据库中创建数据表，用SQL命令修改表的结构，将数据插入到表中，并完成SQL查询。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成原理&lt;一&gt;</title>
+    <link href="http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/"/>
+    <id>http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/</id>
+    <published>2020-03-16T13:15:19.000Z</published>
+    <updated>2020-04-01T05:01:34.641Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一章-计算机系统概论"><a href="#第一章-计算机系统概论" class="headerlink" title="第一章  计算机系统概论"></a>第一章  计算机系统概论</h1><a id="more"></a><h2 id="1-1-计算机系统简介"><a href="#1-1-计算机系统简介" class="headerlink" title="1.1 计算机系统简介"></a>1.1 计算机系统简介</h2><h3 id="计算机的软硬件概念"><a href="#计算机的软硬件概念" class="headerlink" title="计算机的软硬件概念"></a>计算机的软硬件概念</h3><p>计算机系统</p><ul><li><p>硬件：计算机实体</p></li><li><p>软件：具有各类特殊功能的（程序）</p></li></ul><p>软件分为</p><ul><li><p>系统软件： 用来管理整个计算机系统</p><p>   语言处理系统 操作系统 服务性程序 数据库管理系统 网络软件 </p></li><li><p>软件系统： 按任务需要编制成的各种软件</p></li></ul><h3 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h3><p>高级语言 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 虚拟机器M3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 用编译程序翻译成汇编语言</p><p>汇编语言 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 虚拟机器M2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 用汇编程序翻译成机器语言程序</p><p>操作系统 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 虚拟机器M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 用机器语言解释操作系统</p><p>机器语言 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实际机器M1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 用微指令解释机器指令</p><p>微指令系统 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 微程序机器M0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 由硬件直接执行微指令  </p><h3 id="计算机体系结构和计算机组成"><a href="#计算机体系结构和计算机组成" class="headerlink" title="计算机体系结构和计算机组成"></a>计算机体系结构和计算机组成</h3><ul><li><p>计算机体系结构 &lt;有无乘法指令&gt; ：计算机系统属性概念性的结构与功能特性 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（指令系统，数据类型，寻址技术，I/O机理）</p></li><li><p>计算机组成 &lt;如何实现乘法指令&gt; ：实现计算机体系结构所体现的属性 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （具体指令的实现）</p></li></ul><h2 id="计算机的组成"><a href="#计算机的组成" class="headerlink" title="计算机的组成"></a>计算机的组成</h2><h3 id="冯若依曼机的特点"><a href="#冯若依曼机的特点" class="headerlink" title="冯若依曼机的特点"></a>冯若依曼机的特点</h3><ul><li><p>计算机由五大件组成</p></li><li><p>指令和数据以同等地位存于存储器，可按地址寻访</p></li><li><p>指令和数据用二进制表示</p></li><li><p>指令由操作码和地址码组成</p></li><li><p>存储程序</p></li><li><p>以<strong>运算器</strong>为中心</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;第一章-计算机系统概论&quot;&gt;&lt;a href=&quot;#第一章-计算机系统概论&quot; class=&quot;headerlink&quot; title=&quot;第一章  计算机系统概论&quot;&gt;&lt;/a&gt;第一章  计算机系统概论&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
