@@ -46,10 +46,15 @@
 <meta property="og:site_name" content="Aabigale&#39;s blog">
 <meta property="og:description" content="java 学习">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C5.png">
+<meta property="og:image" content="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C6.png">
+<meta property="og:image" content="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C7.png">
+<meta property="og:image" content="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C8.png">
 <meta property="article:published_time" content="2020-04-03T09:02:21.839Z">
-<meta property="article:modified_time" content="2020-04-08T11:42:20.592Z">
+<meta property="article:modified_time" content="2020-04-08T13:17:33.747Z">
 <meta property="article:author" content="Aabigale">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C5.png">
     
         <link rel="alternate" type="application/atom+xml" title="Aabigale&#39;s blog" href="/atom.xml">
     
@@ -222,7 +227,7 @@
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="java-学习"><a href="#java-学习" class="headerlink" title="java 学习"></a>java 学习</h2><a id="more"></a>
@@ -245,23 +250,73 @@
 <li><p>类的定义</p>
 <ul>
 <li><p>类的定义格式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] class 类名 [ extends 父类名][ implements 接口名]{</span><br><span class="line">   //类体，包括类的成员变量和成员方法</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C5.png" alt="5"></p>
+</li>
+<li><p>声明成员变量</p>
+<p><img src="/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C6.png" alt="6"></p>
+</li>
+<li><p>声明成员方法</p>
+<p><img src="/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C7.png" alt="7"></p>
+<p>TIP：</p>
+<ul>
+<li>在 Java 中，定义在<strong>类中的变量被称为成员变量</strong>，定义在<strong>方法中的变量称为局部变量</strong></li>
+<li>如果在某个方法中定义的局部变量与成员变量同名，此时方法中通过变量名访问到的是局部变量，而非成员变量 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>对象的创建与使用</p>
+<ul>
+<li><p>对象创建的语法格式</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名称 = new 类名()</span><br><span class="line">使用示例：</span><br><span class="line">Person p = new Person ();</span><br></pre></td></tr></tbody></table></figure>
 
+<p>​       TIP：</p>
+<pre><code>* Java 将内存分为两种，栈内存和堆内存
+* 栈内存存放基本类型的变量和对象的引用变量 ( 如Person p )，堆内存用于存放由 new 创建的对象和数组</code></pre></li>
+<li><p>对象成员的调用：</p>
+<ul>
+<li><p>通过对象的引用来访问对象的所有成员</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象引用.对象成员</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>直接使用创建的对象本身来引用对象成员</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 类名().对象成员</span><br></pre></td></tr></tbody></table></figure>
 
-
+<p><strong>TIP：第二种方法容易产生垃圾对象</strong></p>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>对象的创建与使用</p>
+<li><p>成员变量的初始值</p>
 </li>
+<li><p>垃圾对象的形成</p>
+<p>形成：当没有任何变量引用对象时，该对象将成为垃圾变量，不能再使用</p>
+<ul>
+<li><p>对象的引用超出作用域</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">     Person p1 = new Person();</span><br><span class="line">     ......</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>对象的引用重新指向空地址 ( null )</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">     Person p2 = new Person();</span><br><span class="line">     ......</span><br><span class="line">     p2 = null;</span><br><span class="line">     ......</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>​       说明：使用变量 p2 引用了一个Person类型的变量，接着将变量 p2 的值置为 null ，被 p2 所引用的Person 对象就会失去引用，成为垃圾对象</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li><p>访问控制符</p>
+<p>在 Java 中，针对类，成员方法提供了四种访问级别，分别是 private、default、protected 和 public</p>
+<p><img src="/2020/04/03/Java%E5%AD%A6%E4%B9%A0/E:%5Cnodejs%5Cnode_global%5Chexo%5Csource_posts%5C8.png" alt="8"></p>
 </li>
 </ul>
 <h3 id="类的封装"><a href="#类的封装" class="headerlink" title="类的封装"></a>类的封装</h3><ul>
-<li>为什么需要封装</li>
-<li>如何实现封装</li>
+<li><p>为什么需要封装</p>
+<p>要对成员变量的访问做出一些限定，不允许外界随意访问，这就是需要实现类的封装</p>
+</li>
+<li><p>如何实现封装</p>
+</li>
 </ul>
 <h3 id="方法的重载和递归"><a href="#方法的重载和递归" class="headerlink" title="方法的重载和递归"></a>方法的重载和递归</h3><ul>
 <li>方法的重载</li>
@@ -296,7 +351,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-04-08T11:42:20.592Z" itemprop="dateUpdated">2020-04-08 19:42:20</time>
+    Last updated: <time datetime="2020-04-08T13:17:33.747Z" itemprop="dateUpdated">2020-04-08 21:17:33</time>
 </span>
 
 
