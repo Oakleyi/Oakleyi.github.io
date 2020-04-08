@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2020-04-06T06:04:37.536Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://oakleyi.github.io/"/>
+  <updated>2020-04-07T06:29:09.325Z</updated>
+  <id>https://oakleyi.github.io/</id>
   
   <author>
     <name>Aabigale</name>
@@ -17,9 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端之CSS</title>
+    <link href="https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/"/>
+    <id>https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/</id>
+    <published>2020-04-07T06:02:28.960Z</published>
+    <updated>2020-04-07T06:29:09.325Z</updated>
+    
+    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在vscode中配置Java环境</title>
+    <link href="https://oakleyi.github.io/2020/04/07/%E5%9C%A8vscode%E4%B8%AD%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/"/>
+    <id>https://oakleyi.github.io/2020/04/07/%E5%9C%A8vscode%E4%B8%AD%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/</id>
+    <published>2020-04-07T05:19:19.431Z</published>
+    <updated>2020-04-07T05:19:33.983Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="在vscode中配置Java环境"><a href="#在vscode中配置Java环境" class="headerlink" title="在vscode中配置Java环境"></a>在vscode中配置Java环境</h1><a id="more"></a><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>官网下载</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="配置中文"><a href="#配置中文" class="headerlink" title="配置中文"></a>配置中文</h3><ul><li>点击旁边的 Extensions</li><li>搜索框编辑 Chinese </li><li>下载 Chinese ( Simplified )</li></ul><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>​            可以看自己喜好</p><h3 id="下载关于编辑-Java-的插件"><a href="#下载关于编辑-Java-的插件" class="headerlink" title="下载关于编辑 Java 的插件"></a>下载关于编辑 Java 的插件</h3><p>​     </p><ul><li><p>便于编辑而安装的插件</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Beautify：代码高亮</span><br><span class="line">Terminal：直接唤起终端</span><br><span class="line">Project Manager：多个项目切换</span><br><span class="line">Auto Close Tag：标签自动闭合</span><br><span class="line">Eclipse Keymap：可以通过一些快捷键更方便地编写Java</span><br></pre></td></tr></tbody></table></figure></li><li><p>配置 Java 环境而安装的插件</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Language Support for Java(TM) by Red Hat 运行 Java 代码的</span><br><span class="line">Debugger for Java 调试 Java 程序</span><br><span class="line">Java Test Runner 测试 Java 程序</span><br><span class="line">Maven for Java Java环境下构建应用程序的软件</span><br></pre></td></tr></tbody></table></figure></li></ul><h2 id="设置工作环境"><a href="#设置工作环境" class="headerlink" title="设置工作环境"></a>设置工作环境</h2><ul><li>点击菜单 File( 文件 ) –&gt; Save Workspace As····( 将工作区另存为)····</li><li>将新建的 ( 文件名 ) 文件添加至工作区</li></ul><h2 id="新建-Java-项目"><a href="#新建-Java-项目" class="headerlink" title="新建 Java 项目"></a>新建 Java 项目</h2><ul><li>在工作区点击菜单栏 View ( 查看 ) –&gt; command Palette ( 命令面板)</li><li>输入Java，选择Java : Create Java Project，新建Java项目 </li><li>在弹出的框中，选择<strong>工作空间文件夹</strong></li><li>接着输入项目名称，回车</li><li>会自动生成一段打印hello Java代码</li><li>编译运行</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;在vscode中配置Java环境&quot;&gt;&lt;a href=&quot;#在vscode中配置Java环境&quot; class=&quot;headerlink&quot; title=&quot;在vscode中配置Java环境&quot;&gt;&lt;/a&gt;在vscode中配置Java环境&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java之面向对象</title>
+    <link href="https://oakleyi.github.io/2020/04/07/Java%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://oakleyi.github.io/2020/04/07/Java%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2020-04-07T01:48:48.965Z</published>
+    <updated>2020-04-07T01:48:48.966Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Java之面向对象"><a href="#Java之面向对象" class="headerlink" title="Java之面向对象"></a>Java之面向对象</h2><h3 id="面向对象概述"><a href="#面向对象概述" class="headerlink" title="面向对象概述"></a>面向对象概述</h3><ul><li>面向对象的特点<ul><li>封装</li><li>继承：继承主要描述类与类之间的关系，通过继承，可以在无需重新编写的原来类的情况下，对原有类的功能进行拓展</li><li>多态：是指一个类被其他类继承之后，·····</li></ul></li></ul><h3 id="Java中的类与对象"><a href="#Java中的类与对象" class="headerlink" title="Java中的类与对象"></a>Java中的类与对象</h3><ul><li><p>类与对象的关系：类是一类具有相同特性的事物</p></li><li><p>类的定义</p><ul><li>声明成员变量</li></ul><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 数据类型 变量名 [ = 值]</span><br><span class="line">修饰符可以是 public、private 等</span><br><span class="line">数据类型：声明变量存储的数据类型</span><br><span class="line">变量名称：必须符合标识符的命名规则</span><br><span class="line">= 值 对变量进行赋值，也可以后续再赋值</span><br></pre></td></tr></tbody></table></figure></li></ul><ul><li><p>声明成员方法</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符][返回值类型]方法名(){</span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>​       <strong>在方法中定义的变量为局部变量</strong></p></li></ul><ul><li><p>​        对象创建的语法格式</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名称 = new 类名()//无参构造方法</span><br></pre></td></tr></tbody></table></figure></li></ul><ul><li>内存</li></ul><ul><li><p>对象的使用</p><ul><li>通过</li><li>直接</li></ul></li><li></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Java之面向对象&quot;&gt;&lt;a href=&quot;#Java之面向对象&quot; class=&quot;headerlink&quot; title=&quot;Java之面向对象&quot;&gt;&lt;/a&gt;Java之面向对象&lt;/h2&gt;&lt;h3 id=&quot;面向对象概述&quot;&gt;&lt;a href=&quot;#面向对象概述&quot; class=&quot;head
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html</title>
+    <link href="https://oakleyi.github.io/2020/04/06/html/"/>
+    <id>https://oakleyi.github.io/2020/04/06/html/</id>
+    <published>2020-04-06T13:59:36.547Z</published>
+    <updated>2020-04-06T13:59:36.548Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="web前端开发最佳实践"><a href="#web前端开发最佳实践" class="headerlink" title="web前端开发最佳实践"></a>web前端开发最佳实践</h1><a id="more"></a><h2 id="高效web前端开发综述"><a href="#高效web前端开发综述" class="headerlink" title="高效web前端开发综述"></a>高效web前端开发综述</h2><h3 id="web前端开发概述"><a href="#web前端开发概述" class="headerlink" title="web前端开发概述"></a>web前端开发概述</h3><h3 id="高效web前端开发"><a href="#高效web前端开发" class="headerlink" title="高效web前端开发"></a>高效web前端开发</h3><h2 id="HTML相关开发最佳实践"><a href="#HTML相关开发最佳实践" class="headerlink" title="HTML相关开发最佳实践"></a>HTML相关开发最佳实践</h2><h3 id="标准的HTML代码"><a href="#标准的HTML代码" class="headerlink" title="标准的HTML代码"></a>标准的HTML代码</h3><h3 id="高可读性的HTML"><a href="#高可读性的HTML" class="headerlink" title="高可读性的HTML"></a>高可读性的HTML</h3><h3 id="积极拥抱HTML5"><a href="#积极拥抱HTML5" class="headerlink" title="积极拥抱HTML5"></a>积极拥抱HTML5</h3><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;web前端开发最佳实践&quot;&gt;&lt;a href=&quot;#web前端开发最佳实践&quot; class=&quot;headerlink&quot; title=&quot;web前端开发最佳实践&quot;&gt;&lt;/a&gt;web前端开发最佳实践&lt;/h1&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>在hexo搭建的博客中引入图片</title>
-    <link href="http://yoursite.com/2020/04/06/%E5%9C%A8hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87/"/>
-    <id>http://yoursite.com/2020/04/06/%E5%9C%A8hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87/</id>
+    <link href="https://oakleyi.github.io/2020/04/06/%E5%9C%A8hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87/"/>
+    <id>https://oakleyi.github.io/2020/04/06/%E5%9C%A8hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87/</id>
     <published>2020-04-06T06:04:08.995Z</published>
     <updated>2020-04-06T06:04:37.536Z</updated>
     
@@ -41,8 +127,8 @@
   
   <entry>
     <title>Linux</title>
-    <link href="http://yoursite.com/2020/04/06/Linux/"/>
-    <id>http://yoursite.com/2020/04/06/Linux/</id>
+    <link href="https://oakleyi.github.io/2020/04/06/Linux/"/>
+    <id>https://oakleyi.github.io/2020/04/06/Linux/</id>
     <published>2020-04-06T03:15:10.256Z</published>
     <updated>2020-04-06T06:00:10.288Z</updated>
     
@@ -67,8 +153,8 @@
   
   <entry>
     <title>数据结构</title>
-    <link href="http://yoursite.com/2020/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2020/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="https://oakleyi.github.io/2020/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>https://oakleyi.github.io/2020/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2020-04-05T13:51:43.137Z</published>
     <updated>2020-04-06T06:03:33.906Z</updated>
     
@@ -86,8 +172,8 @@
   
   <entry>
     <title>算法</title>
-    <link href="http://yoursite.com/2020/04/05/%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2020/04/05/%E7%AE%97%E6%B3%95/</id>
+    <link href="https://oakleyi.github.io/2020/04/05/%E7%AE%97%E6%B3%95/"/>
+    <id>https://oakleyi.github.io/2020/04/05/%E7%AE%97%E6%B3%95/</id>
     <published>2020-04-05T08:58:21.848Z</published>
     <updated>2020-04-05T10:05:18.377Z</updated>
     
@@ -105,8 +191,8 @@
   
   <entry>
     <title>数据库系统概述 一</title>
-    <link href="http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/"/>
-    <id>http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/</id>
+    <link href="https://oakleyi.github.io/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/"/>
+    <id>https://oakleyi.github.io/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%20%E4%B8%80/</id>
     <published>2020-04-03T09:02:21.868Z</published>
     <updated>2020-04-06T06:08:32.993Z</updated>
     
@@ -124,16 +210,18 @@
   
   <entry>
     <title>前端入门</title>
-    <link href="http://yoursite.com/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/"/>
-    <id>http://yoursite.com/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/</id>
+    <link href="https://oakleyi.github.io/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/"/>
+    <id>https://oakleyi.github.io/2020/04/03/%E5%89%8D%E7%AB%AF%E5%85%A5%E9%97%A8/</id>
     <published>2020-04-03T09:02:21.861Z</published>
-    <updated>2020-04-05T14:48:58.346Z</updated>
+    <updated>2020-04-06T13:53:30.303Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前端入门-HTML-amp-CSS-学习"><a href="#前端入门-HTML-amp-CSS-学习" class="headerlink" title="前端入门 HTML&amp;CSS 学习"></a>前端入门 HTML&amp;CSS 学习</h1><a id="more"></a><h2 id="HTML入门教程-lt-结构-gt"><a href="#HTML入门教程-lt-结构-gt" class="headerlink" title="HTML入门教程 ##<结构>"></a>HTML入门教程 ##&lt;结构&gt;</h2><p>在网页中HTML专门负责网页的结构</p><h3 id="HTML编辑器"><a href="#HTML编辑器" class="headerlink" title="HTML编辑器"></a>HTML编辑器</h3><p>nodepad++，推荐使用vscode。<br>将vscode翻译成中文界面，下载插件Chinese</p><h3 id="HTML基础结构"><a href="#HTML基础结构" class="headerlink" title="HTML基础结构"></a>HTML基础结构</h3><pre><code>&lt;!doctype&amp;nbsp;html&gt;文档声明 &lt;html&gt;    &lt;head&gt;帮助浏览器或者搜索引擎解析网页        &lt;meta&gt;        &lt;title&gt;网页的标题&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        网页显示内容    &lt;/body&gt; &lt;/html&gt;</code></pre><p>   <strong>以上是网页的基本结构</strong></p><h3 id="HTML-在-lt-head-gt-内的标签"><a href="#HTML-在-lt-head-gt-内的标签" class="headerlink" title="HTML 在<head>内的标签"></a>HTML 在&lt;head&gt;内的标签</h3><ul><li><p>&lt;meta&gt;用来设置网页的元数据</p><ul><li><p>charset 指定网页的字符</p></li><li><p>name 指定的数据的名称 </p><p>&lt;keywords 表示网页的关键字&gt;<br>&lt;description 用于网站的指定描述&gt;<br><strong>具体详情查阅HTML手册</strong></p></li><li><p>content 指定的数据内容 <br></p></li></ul></li><li><p>&lt;title&gt;网页的标题&lt;/title&gt;显示在浏览器的搜索栏，根据title判断网页内容</p><h3 id="HTML-在-lt-body-gt-内的标签"><a href="#HTML-在-lt-body-gt-内的标签" class="headerlink" title="HTML 在<body>内的标签"></a>HTML 在&lt;body&gt;内的标签</h3><p>&lt;body&gt;表示网页的主体，网页所有可见的内容都应该写在body</p></li><li><p>自结束标签<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像&lt;img&gt;，&lt;imput&gt;</p></li><li><p>注释：&lt;!– 注释内容 –&gt;</p></li><li><p>标签属性：在标签中（开始标签或自结束标签）可以设置属性<br>属性是一个名值对（x=”y”或’y’）&lt;font&nbsp;&nbsp;x=”y”&gt;需要改变属性的内容&lt;/font&gt;&nbsp;&nbsp;x是名，y是值</p></li><li><p>实体语法 &lt;在网页中编写特殊符时会出现问题&gt;</p><p>  实体的名字;</p></li><li><p>语义化标签(1)：&lt;一般来说在块元素里面放行内元素&gt;</p><ul><li><p>块元素：对网页进行布局，在页面中独占一行的标签<br>&lt;p&gt;标签在页面中表示一个段落，<strong>p标签中不能放任何块元素</strong><br>&lt;hgroup&gt;标签为标题组，可以存放一组相关的标题</p></li><li><p>行内元素：用来包裹文字在页面中不会独占一行<br>&lt;em&gt;标签表示语音语调的加重<br>&lt;strong&gt;表示强调重要内容</p></li></ul></li><li><p>语义化标签（2）：结构化语义标签<br>  &lt;header&gt;表示网页的头部，<strong>可以有多个</strong><br>  &lt;main&gt;表示网页的主体，<strong>只能有一个</strong><br>  &lt;foot&gt;表示网页的底部<br>  &lt;nav&gt;表示网页的导航<br>  &lt;aside&gt;和主题相关的内容（侧边栏）<br>  &lt;artice&gt;表示一个独立文章<br>  &lt;section&gt;表示一个独立的区块</p><pre><code>**div 没有语义，就表示一个区块，目前主要的布局元素span没有任何语义，一般用来选中文字** </code></pre></li><li><p>语义化标签（3）：列表（list）列表之间可以相互嵌套</p><ul><li><p>有序列表</p><p>&lt;ui&gt;&lt;/ui&gt;创建</p></li><li><p>无序列表</p><p>&lt;oi&gt;&lt;/oi&gt;创建</p></li><li><p>定义列表</p><p>&lt;dl&gt;&lt;/dl&gt;创建<br>&lt;dt&gt;&lt;/dt&gt;定义到内容<br>&lt;dd&gt;&lt;/dd&gt;对内容进行解释说明</p></li><li><p>超链接：从当前页面跳转到其他页面或者当前页面的其他位置,<strong>在标签中可以除它外的人和元素</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&gt;&lt;/a&gt;定义超链接<br>&nbsp;&nbsp;&nbsp;&nbsp;href属性 指定跳转路径，<strong>相对路径绝对路径</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将href属性设置为#回到网页顶部，底部的设计利用id属性<br>&nbsp;&nbsp;&nbsp;&nbsp;id属性 元素的唯一标识，在同一个不能重复出现id属性<br>&nbsp;&nbsp;&nbsp;&nbsp;target属性，用来指定超链接打开的位置<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可选值：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_self 默认值在当前页面打开超链接。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_blank 在一个新的页面打开超链接。</p></li><li><p>图片标签：用于向当前页面引入一个外部图片<br><strong>img属性替换元素，具有块元素和行内元素的特点</strong></p><ul><li>使用img标签引入，img是自结束标签<br>属性&nbsp;&nbsp;&nbsp;&nbsp;src属性指定外部图片路径<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt属性图片描述搜索引擎根据alt内容识别图片<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width,height属性</li><li>图片的格式</li></ul></li><li><p>内联框架：用于向当前界面引入一个其他页面</p><ul><li>使用&lt;iframe&gt;&lt;/iframe&gt;标签<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; src属性指定引入网页属性<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frameborder属性指定内联框架的边框</li></ul></li><li><p>音视频：</p><ul><li>audio标签引入外部音频<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;controls属性是否允许用户控制播放<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aotoplayer属性是否允许自动播放，<strong>大部分浏览器都不会自动对音乐进行播放</strong></li></ul></li></ul></li></ul><h2 id="CSS-lt-表现-gt-入门教程"><a href="#CSS-lt-表现-gt-入门教程" class="headerlink" title="CSS<表现>入门教程"></a>CSS&lt;表现&gt;入门教程</h2><p>css简述：css用来设置网页中的元素样式</p><p>修改元素样式</p><ul><li>第一种方法&lt;内联样式，行内元素&gt;：在标签内部通过style属性来设置元素的样式，<strong>该方法只能对一个标签生效</strong></li><li>第二种方法：内部样式表，将样式编写到head中的style标签里&lt;相当于#define&gt;</li><li>第三种方法：外部样式表，将css样式编写到.css文件中，然后通过link标签引用外部的css文件，**可以使用网页的缓存机制，从而加快网页的加载速度</li></ul><h3 id="css基本语法"><a href="#css基本语法" class="headerlink" title="css基本语法"></a>css基本语法</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">css的注释&lt;在&lt;style&gt;&lt;/style&gt;中&gt;/**/</span><br></pre></td></tr></tbody></table></figure><h4 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h4><p>通过选择器可以选中页面的指定元素</p><p>​    </p><p>​    </p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<hr><hr><h1 id="web前端开发最佳实践"><a href="#web前端开发最佳实践" class="headerlink" title="web前端开发最佳实践"></a>web前端开发最佳实践</h1><h1 id="前端入门-HTML-amp-CSS-学习"><a href="#前端入门-HTML-amp-CSS-学习" class="headerlink" title="前端入门 HTML&amp;CSS 学习"></a>前端入门 HTML&amp;CSS 学习</h1><a id="more"></a><h2 id="第一部分-高效web前端开发综述"><a href="#第一部分-高效web前端开发综述" class="headerlink" title="第一部分 高效web前端开发综述"></a>第一部分 高效web前端开发综述</h2><h2 id="HTML相关开发的"><a href="#HTML相关开发的" class="headerlink" title="HTML相关开发的"></a>HTML相关开发的</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前端入门-HTML-amp-CSS-学习&quot;&gt;&lt;a href=&quot;#前端入门-HTML-amp-CSS-学习&quot; class=&quot;headerlink&quot; title=&quot;前端入门 HTML&amp;amp;CSS 学习&quot;&gt;&lt;/a&gt;前端入门 HTML&amp;amp;CSS 学习&lt;/h1&gt;
+      &lt;hr&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;web前端开发最佳实践&quot;&gt;&lt;a href=&quot;#web前端开发最佳实践&quot; class=&quot;headerlink&quot; title=&quot;web前端开发最佳实践&quot;&gt;&lt;/a&gt;web前端开发最佳实践&lt;/h1&gt;&lt;h1 id=&quot;前端入门-HTML-amp-CSS-学习&quot;&gt;&lt;a href=&quot;#前端入门-HTML-amp-CSS-学习&quot; class=&quot;headerlink&quot; title=&quot;前端入门 HTML&amp;amp;CSS 学习&quot;&gt;&lt;/a&gt;前端入门 HTML&amp;amp;CSS 学习&lt;/h1&gt;
     
     </summary>
     
@@ -143,12 +231,12 @@
   
   <entry>
     <title>Java学习</title>
-    <link href="http://yoursite.com/2020/04/03/Java%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2020/04/03/Java%E5%AD%A6%E4%B9%A0/</id>
+    <link href="https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://oakleyi.github.io/2020/04/03/Java%E5%AD%A6%E4%B9%A0/</id>
     <published>2020-04-03T09:02:21.839Z</published>
-    <updated>2020-04-03T11:44:58.700Z</updated>
+    <updated>2020-04-08T11:42:20.592Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="java-学习"><a href="#java-学习" class="headerlink" title="java 学习"></a>java 学习</h2><a id="more"></a><h3 id="Java程序的安装"><a href="#Java程序的安装" class="headerlink" title="Java程序的安装"></a>Java程序的安装</h3><h3 id="Java语法"><a href="#Java语法" class="headerlink" title="Java语法"></a>Java语法</h3><h4 id="Java的基本语法"><a href="#Java的基本语法" class="headerlink" title="Java的基本语法"></a>Java的基本语法</h4><ul><li><p>注释</p></li><li><p>标识符</p><pre><code>通用规范</code></pre></li></ul><h4 id="Java中的变量与常量"><a href="#Java中的变量与常量" class="headerlink" title="Java中的变量与常量"></a>Java中的变量与常量</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<h2 id="java-学习"><a href="#java-学习" class="headerlink" title="java 学习"></a>java 学习</h2><a id="more"></a><h2 id="Java-开发入门"><a href="#Java-开发入门" class="headerlink" title="Java 开发入门"></a>Java 开发入门</h2><h2 id="Java-编程基础"><a href="#Java-编程基础" class="headerlink" title="Java 编程基础"></a>Java 编程基础</h2><h2 id="面向对象-上"><a href="#面向对象-上" class="headerlink" title="面向对象  上"></a>面向对象  上</h2><h3 id="面向对象概述"><a href="#面向对象概述" class="headerlink" title="面向对象概述"></a>面向对象概述</h3><ul><li>面向对象的特点<ul><li>封装：面向对象的核心思想，将对象的属性和行为封装起来，不需要外界知道具体实现细节</li><li>继承：主要描述类与类之间的关系，通过继承，在无需重新编写原有类的情况下，对原有类的功能进行扩展</li><li>多态：发现在继承之后，引用相同类型的变量调用同一个方法所呈现的多种不同行为特征</li></ul></li></ul><h3 id="Java-中的类与对象"><a href="#Java-中的类与对象" class="headerlink" title="Java 中的类与对象"></a>Java 中的类与对象</h3><ul><li><p>类与对象的关系</p><ul><li>类是对某一类事物的抽象描述，而对象用于表示现实中该类实物的个体</li><li>类用于描述多个对象的共同特征，它是对象的模板，而对象用于描述现实中的个体，它是类的实例</li></ul></li><li><p>类的定义</p><ul><li><p>类的定义格式</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] class 类名 [ extends 父类名][ implements 接口名]{</span><br><span class="line">   //类体，包括类的成员变量和成员方法</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></li></ul></li></ul><ul><li><p>对象的创建与使用</p></li><li><p>访问控制符</p></li></ul><h3 id="类的封装"><a href="#类的封装" class="headerlink" title="类的封装"></a>类的封装</h3><ul><li>为什么需要封装</li><li>如何实现封装</li></ul><h3 id="方法的重载和递归"><a href="#方法的重载和递归" class="headerlink" title="方法的重载和递归"></a>方法的重载和递归</h3><ul><li>方法的重载</li><li>方法的递归</li></ul><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul><li>构造方法的定义</li><li>构造方法的重载</li></ul><h3 id="this-关键字"><a href="#this-关键字" class="headerlink" title="this 关键字"></a>this 关键字</h3><h3 id="static-关键字"><a href="#static-关键字" class="headerlink" title="static 关键字"></a>static 关键字</h3><h2 id="面向对象-下"><a href="#面向对象-下" class="headerlink" title="面向对象  下"></a>面向对象  下</h2><h2 id="Java-中的常用类"><a href="#Java-中的常用类" class="headerlink" title="Java 中的常用类"></a>Java 中的常用类</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="IO-流"><a href="#IO-流" class="headerlink" title="IO 流"></a>IO 流</h2><h2 id="GUI-图形用户接口"><a href="#GUI-图形用户接口" class="headerlink" title="GUI  ( 图形用户接口 )"></a>GUI  ( 图形用户接口 )</h2><h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -162,8 +250,8 @@
   
   <entry>
     <title>数据库作业踩的坑</title>
-    <link href="http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
-    <id>http://yoursite.com/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/</id>
+    <link href="https://oakleyi.github.io/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/"/>
+    <id>https://oakleyi.github.io/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%9C%E4%B8%9A%E8%B8%A9%E7%9A%84%E5%9D%91/</id>
     <published>2020-04-03T09:02:21.812Z</published>
     <updated>2020-04-03T10:59:13.317Z</updated>
     
@@ -181,8 +269,8 @@
   
   <entry>
     <title>计算机组成原理&lt;一&gt;</title>
-    <link href="http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/"/>
-    <id>http://yoursite.com/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/</id>
+    <link href="https://oakleyi.github.io/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/"/>
+    <id>https://oakleyi.github.io/2020/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E4%B8%80/</id>
     <published>2020-03-16T13:15:19.000Z</published>
     <updated>2020-04-03T10:59:13.310Z</updated>
     
