@@ -62,28 +62,6 @@
   </entry>
   
   <entry>
-    <title>Java之面向对象</title>
-    <link href="https://oakleyi.github.io/2020/04/07/Java%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>https://oakleyi.github.io/2020/04/07/Java%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2020-04-07T01:48:48.965Z</published>
-    <updated>2020-04-08T11:53:19.788Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Java之面向对象"><a href="#Java之面向对象" class="headerlink" title="Java之面向对象"></a>Java之面向对象</h2><h3 id="面向对象概述"><a href="#面向对象概述" class="headerlink" title="面向对象概述"></a>面向对象概述</h3><ul><li>面向对象的特点<ul><li>封装</li><li>继承：继承主要描述类与类之间的关系，通过继承，可以在无需重新编写的原来类的情况下，对原有类的功能进行拓展</li><li>多态：是指一个类被其他类继承之后，·····</li></ul></li></ul><h3 id="Java中的类与对象"><a href="#Java中的类与对象" class="headerlink" title="Java中的类与对象"></a>Java中的类与对象</h3><ul><li><p>类与对象的关系：类是一类具有相同特性的事物</p></li><li><p>类的定义</p><ul><li>声明成员变量</li></ul><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] 数据类型 变量名 [ = 值]</span><br><span class="line">修饰符可以是 public、private 等</span><br><span class="line">数据类型：声明变量存储的数据类型</span><br><span class="line">变量名称：必须符合标识符的命名规则</span><br><span class="line">= 值 对变量进行赋值，也可以后续再赋值</span><br></pre></td></tr></tbody></table></figure></li></ul><ul><li><p>声明成员方法</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符][返回值类型]方法名(){</span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>​       <strong>在方法中定义的变量为局部变量</strong></p></li></ul><ul><li><p>​        对象创建的语法格式</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名称 = new 类名()//无参构造方法</span><br></pre></td></tr></tbody></table></figure></li></ul><ul><li>内存</li></ul><ul><li><p>对象的使用</p><ul><li>通过</li><li>直接</li></ul></li><li></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Java之面向对象&quot;&gt;&lt;a href=&quot;#Java之面向对象&quot; class=&quot;headerlink&quot; title=&quot;Java之面向对象&quot;&gt;&lt;/a&gt;Java之面向对象&lt;/h2&gt;&lt;h3 id=&quot;面向对象概述&quot;&gt;&lt;a href=&quot;#面向对象概述&quot; class=&quot;head
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>html</title>
     <link href="https://oakleyi.github.io/2020/04/06/html/"/>
     <id>https://oakleyi.github.io/2020/04/06/html/</id>
