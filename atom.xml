@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oakleyi.github.io/"/>
-  <updated>2020-04-10T10:14:48.556Z</updated>
+  <updated>2020-04-12T05:46:52.804Z</updated>
   <id>https://oakleyi.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/"/>
     <id>https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/</id>
     <published>2020-04-10T08:26:01.025Z</published>
-    <updated>2020-04-10T10:14:48.556Z</updated>
+    <updated>2020-04-12T05:46:52.804Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数据库系统之三–数据建模与数据库设计"><a href="#数据库系统之三–数据建模与数据库设计" class="headerlink" title="数据库系统之三–数据建模与数据库设计"></a>数据库系统之三–数据建模与数据库设计</h1><h2 id="数据建模：思想与方法"><a href="#数据建模：思想与方法" class="headerlink" title="数据建模：思想与方法"></a>数据建模：思想与方法</h2><h3 id="为什么要数据建模和数据库设计"><a href="#为什么要数据建模和数据库设计" class="headerlink" title="为什么要数据建模和数据库设计"></a>为什么要数据建模和数据库设计</h3><h3 id="E-R模型-–-数据建模之基本思想"><a href="#E-R模型-–-数据建模之基本思想" class="headerlink" title="E - R模型 – 数据建模之基本思想"></a>E - R模型 – 数据建模之基本思想</h3><h3 id="E-R-模型-–-表达方法之-Chen-方法"><a href="#E-R-模型-–-表达方法之-Chen-方法" class="headerlink" title="E - R 模型 – 表达方法之 Chen 方法"></a>E - R 模型 – 表达方法之 Chen 方法</h3><h3 id="E-R-模型-–-表达方法之-Crow’s-foot-方法"><a href="#E-R-模型-–-表达方法之-Crow’s-foot-方法" class="headerlink" title="E - R 模型 – 表达方法之 Crow’s foot 方法"></a>E - R 模型 – 表达方法之 Crow’s foot 方法</h3><h3 id="数据建模之案例讲解"><a href="#数据建模之案例讲解" class="headerlink" title="数据建模之案例讲解"></a>数据建模之案例讲解</h3><h3 id="数据库设计中的抽象"><a href="#数据库设计中的抽象" class="headerlink" title="数据库设计中的抽象"></a>数据库设计中的抽象</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该部分的重难点</span><br><span class="line">* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow's foot 表达方法</span><br><span class="line">* 熟练运用 Crow's foot 方法进行数据建模，即建模训练</span><br></pre></td></tr></tbody></table></figure><h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><h2 id="数据库设计过程"><a href="#数据库设计过程" class="headerlink" title="数据库设计过程"></a>数据库设计过程</h2><h3 id="数据库设计过程与设计方法"><a href="#数据库设计过程与设计方法" class="headerlink" title="数据库设计过程与设计方法"></a>数据库设计过程与设计方法</h3><h3 id="E-R-图-IDEF1X-向关系模式的转换"><a href="#E-R-图-IDEF1X-向关系模式的转换" class="headerlink" title="E - R 图 / IDEF1X 向关系模式的转换"></a>E - R 图 / IDEF1X 向关系模式的转换</h3><h3 id="不正确数据库设计引发的问题及其解决"><a href="#不正确数据库设计引发的问题及其解决" class="headerlink" title="不正确数据库设计引发的问题及其解决"></a>不正确数据库设计引发的问题及其解决</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该部分重难点</span><br><span class="line">* 理解数据库设计的四个过程</span><br><span class="line">* 理解不正确数据库设计引发的问题，为数据库理论的学习奠定问题基础</span><br><span class="line">* 理解不正确数据库设计引发的问题，提升数据建模与数据库设计能力</span><br></pre></td></tr></tbody></table></figure><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -43,7 +43,7 @@
     <link href="https://oakleyi.github.io/2020/04/09/JAVA%E5%AE%9E%E8%AE%AD%E4%BD%9C%E4%B8%9A/"/>
     <id>https://oakleyi.github.io/2020/04/09/JAVA%E5%AE%9E%E8%AE%AD%E4%BD%9C%E4%B8%9A/</id>
     <published>2020-04-09T07:59:31.340Z</published>
-    <updated>2020-04-09T07:59:31.341Z</updated>
+    <updated>2020-04-12T05:46:52.794Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JAVA实训作业"><a href="#JAVA实训作业" class="headerlink" title="JAVA实训作业"></a>JAVA实训作业</h1><a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
