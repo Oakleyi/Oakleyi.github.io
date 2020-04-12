@@ -6,7 +6,7 @@
     
     
     
-    <title>前端之CSS | Aabigale&#39;s blog</title>
+    <title>数据库系统概述二 | Aabigale&#39;s blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -39,15 +39,15 @@
 
 
     
-    <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
+    <meta name="description" content="数据库系统之三–数据建模与数据库设计数据建模：思想与方法为什么要数据建模和数据库设计E - R模型 – 数据建模之基本思想E - R 模型 – 表达方法之 Chen 方法E - R 模型 – 表达方法之 Crow’s foot 方法数据建模之案例讲解数据库设计中的抽象123该部分的重难点* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow&#39;s foot 表达方法* 熟练">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端之CSS">
-<meta property="og:url" content="https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/index.html">
+<meta property="og:title" content="数据库系统概述二">
+<meta property="og:url" content="https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/index.html">
 <meta property="og:site_name" content="Aabigale&#39;s blog">
-<meta property="og:description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
+<meta property="og:description" content="数据库系统之三–数据建模与数据库设计数据建模：思想与方法为什么要数据建模和数据库设计E - R模型 – 数据建模之基本思想E - R 模型 – 表达方法之 Chen 方法E - R 模型 – 表达方法之 Crow’s foot 方法数据建模之案例讲解数据库设计中的抽象123该部分的重难点* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow&#39;s foot 表达方法* 熟练">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-07T06:02:28.960Z">
-<meta property="article:modified_time" content="2020-04-08T11:53:19.814Z">
+<meta property="article:published_time" content="2020-04-10T08:26:01.025Z">
+<meta property="article:modified_time" content="2020-04-10T10:14:48.556Z">
 <meta property="article:author" content="Aabigale">
 <meta name="twitter:card" content="summary">
     
@@ -151,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">前端之CSS</div>
+        <div class="flex-col header-title ellipsis">数据库系统概述二</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -188,15 +188,22 @@
 
 <div class="container body-wrap">
     
-<article id="post-前端之CSS"
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据库系统之三–数据建模与数据库设计"><span class="post-toc-number">1.</span> <span class="post-toc-text">数据库系统之三–数据建模与数据库设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据建模：思想与方法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数据建模：思想与方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么要数据建模和数据库设计"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">为什么要数据建模和数据库设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R模型-–-数据建模之基本思想"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">E - R模型 – 数据建模之基本思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-模型-–-表达方法之-Chen-方法"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">E - R 模型 – 表达方法之 Chen 方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-模型-–-表达方法之-Crow’s-foot-方法"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">E - R 模型 – 表达方法之 Crow’s foot 方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据建模之案例讲解"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">数据建模之案例讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计中的抽象"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">数据库设计中的抽象</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">12</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库设计过程"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">数据库设计过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计过程与设计方法"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">数据库设计过程与设计方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-图-IDEF1X-向关系模式的转换"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">E - R 图 &#x2F; IDEF1X 向关系模式的转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不正确数据库设计引发的问题及其解决"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">不正确数据库设计引发的问题及其解决</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-数据库系统概述二"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">前端之CSS</h1>
+        <h1 class="post-card-title">数据库系统概述二</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2020-04-07 14:02:28" datetime="2020-04-07T06:02:28.960Z"  itemprop="datePublished">2020-04-07</time>
+            <time class="post-time" title="2020-04-10 16:26:01" datetime="2020-04-10T08:26:01.025Z"  itemprop="datePublished">2020-04-10</time>
 
             <br id="mybreak"/>
             
@@ -218,7 +225,13 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <script>
+            <h1 id="数据库系统之三–数据建模与数据库设计"><a href="#数据库系统之三–数据建模与数据库设计" class="headerlink" title="数据库系统之三–数据建模与数据库设计"></a>数据库系统之三–数据建模与数据库设计</h1><h2 id="数据建模：思想与方法"><a href="#数据建模：思想与方法" class="headerlink" title="数据建模：思想与方法"></a>数据建模：思想与方法</h2><h3 id="为什么要数据建模和数据库设计"><a href="#为什么要数据建模和数据库设计" class="headerlink" title="为什么要数据建模和数据库设计"></a>为什么要数据建模和数据库设计</h3><h3 id="E-R模型-–-数据建模之基本思想"><a href="#E-R模型-–-数据建模之基本思想" class="headerlink" title="E - R模型 – 数据建模之基本思想"></a>E - R模型 – 数据建模之基本思想</h3><h3 id="E-R-模型-–-表达方法之-Chen-方法"><a href="#E-R-模型-–-表达方法之-Chen-方法" class="headerlink" title="E - R 模型 – 表达方法之 Chen 方法"></a>E - R 模型 – 表达方法之 Chen 方法</h3><h3 id="E-R-模型-–-表达方法之-Crow’s-foot-方法"><a href="#E-R-模型-–-表达方法之-Crow’s-foot-方法" class="headerlink" title="E - R 模型 – 表达方法之 Crow’s foot 方法"></a>E - R 模型 – 表达方法之 Crow’s foot 方法</h3><h3 id="数据建模之案例讲解"><a href="#数据建模之案例讲解" class="headerlink" title="数据建模之案例讲解"></a>数据建模之案例讲解</h3><h3 id="数据库设计中的抽象"><a href="#数据库设计中的抽象" class="headerlink" title="数据库设计中的抽象"></a>数据库设计中的抽象</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该部分的重难点</span><br><span class="line">* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow's foot 表达方法</span><br><span class="line">* 熟练运用 Crow's foot 方法进行数据建模，即建模训练</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><h2 id="数据库设计过程"><a href="#数据库设计过程" class="headerlink" title="数据库设计过程"></a>数据库设计过程</h2><h3 id="数据库设计过程与设计方法"><a href="#数据库设计过程与设计方法" class="headerlink" title="数据库设计过程与设计方法"></a>数据库设计过程与设计方法</h3><h3 id="E-R-图-IDEF1X-向关系模式的转换"><a href="#E-R-图-IDEF1X-向关系模式的转换" class="headerlink" title="E - R 图 / IDEF1X 向关系模式的转换"></a>E - R 图 / IDEF1X 向关系模式的转换</h3><h3 id="不正确数据库设计引发的问题及其解决"><a href="#不正确数据库设计引发的问题及其解决" class="headerlink" title="不正确数据库设计引发的问题及其解决"></a>不正确数据库设计引发的问题及其解决</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该部分重难点</span><br><span class="line">* 理解数据库设计的四个过程</span><br><span class="line">* 理解不正确数据库设计引发的问题，为数据库理论的学习奠定问题基础</span><br><span class="line">* 理解不正确数据库设计引发的问题，提升数据建模与数据库设计能力</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -243,12 +256,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-04-08T11:53:19.814Z" itemprop="dateUpdated">2020-04-08 19:53:19</time>
+    Last updated: <time datetime="2020-04-10T10:14:48.556Z" itemprop="dateUpdated">2020-04-10 18:14:48</time>
 </span>
 
 
         
-        原文链接：<a href="/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/" target="_blank" rel="external">https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/</a>
+        原文链接：<a href="/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" target="_blank" rel="external">https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/</a>
         
     </div>
     <footer>
@@ -278,7 +291,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&title=《前端之CSS》 — Aabigale's blog&pic=https://oakleyi.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&pic=https://oakleyi.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -288,22 +301,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&title=《前端之CSS》 — Aabigale's blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端之CSS》 — Aabigale's blog&url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&via=https://oakleyi.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库系统概述二》 — Aabigale's blog&url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&via=https://oakleyi.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -323,21 +336,13 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2020/04/09/JAVA%E5%AE%9E%E8%AE%AD%E4%BD%9C%E4%B8%9A/" id="post-prev" class="post-nav-link">
-        <h4 class="title" >
-          上一篇：JAVA实训作业
-        </h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/04/07/%E5%9C%A8vscode%E4%B8%AD%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：在vscode中配置Java环境">下一篇：在vscode中配置Java环境</h4>
+      <a href="/2020/04/09/JAVA%E5%AE%9E%E8%AE%AD%E4%BD%9C%E4%B8%9A/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：JAVA实训作业">下一篇：JAVA实训作业</h4>
       </a>
     </div>
   
@@ -436,7 +441,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&title=《前端之CSS》 — Aabigale's blog&pic=https://oakleyi.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&pic=https://oakleyi.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -446,22 +451,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&title=《前端之CSS》 — Aabigale's blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端之CSS》 — Aabigale's blog&url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/&via=https://oakleyi.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库系统概述二》 — Aabigale's blog&url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&via=https://oakleyi.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://oakleyi.github.io/2020/04/07/%E5%89%8D%E7%AB%AF%E4%B9%8BCSS/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://oakleyi.github.io/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -472,7 +477,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwUlEQVR42u3awU7DMBAE0P7/TxeJGxJJZ9ZxIsTLqQoQ+wXJ3o739Yqv9/d1/vnoTnv/6M7REy648PDw8EZTP7qOBji/c/TTBNDO5+h38PDw8Hbzks0gn/T5M9uJno/7wYKHh4f3KG+lRE4W8fOiGQ8PD++v89qoIiG12wkeHh7es7w8SsgHbl9QXkZvyVrw8PDwYt5VB2B3fn7gfA8PDw+vPHZKIob8+UlYfMFs8fDw8Dbw8sOtvE0qKY7bcrzdBV7J/wEPDw9vxMsbApLJrW8G65HHjzt4eHh4G3hJ2TprDsgPw5INIG81+PBMPDw8vG28toDOo4SVwCJ/QXh4eHi7ee3SPGx+KlsEZjHxK58KHh4e3ojXRglt5No2ReWNWdF2hYeHh7eBNxsm+tofBBCz15fPDQ8PD28Hr22omkUGs8A3bx04/Fs8PDy8DbyV5ThZ4lfaDtpNqNDj4eHhLfDykje/8oV+9sxh1oKHh4e3gfdsxJCX5vl2hYeHh3c/r12gZ+1TbQleNC7g4eHh3chrm6jaI/zzgrttNfiQUuPh4eFdystDgbzsTkretqSehRp4eHh4O3htabtSfCctU7MAd+kbAx4eHt4CL//chgLJRjILI6KeMjw8PLxLeXnosBIHzOLgtnzHw8PDe4rXLtl5eV3Hr6OGBjw8PLzdvLZEzo++kuB1xiiO0/Dw8PBu4eXF8fq08q1ldiSGh4eHt4OXhxH5AOvxwey4q/iWgIeHh7fAe5dXG/vOWgeScjlqUMDDw8PbwJt94W+X+DbqXWlowMPDw7uHlwzcFrjJK0g2m1mpjYeHh3cPrx0mDy9mW8hsB/tlRDw8PLxHeUltPjs2W49CPoS5eHh4eI/y2sV9peDOX81lGwMeHh5ezLs2jJi1Z+WbwcNZCx4e3r/ntQdgs4aq9ihrNuLwwsPDw0t5X2B1AyeFOTIDAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD5ElEQVR42u3ay27bQBAEQP//TydAbkFCsntmKftQOhmKvF6WDp15fH3Fr19/Xu079+dcnXD1mc3vHn7hwIEDB47gilevzcNfnZ+f8+8dcqyrd+7vgwMHDhw4TnF8JhQvLxHn3R7u4dlx4MCBA8cHOZIHSx4jj737sMxLShw4cODA8TM5ouMWYbkJ5mP3x4EDBw4chziS5uD95ZKybR+c7evFXikOHDhw4JhnVtH4+5k/v7jfgQMHDhw41tG1ebWLDvehPisgL++GAwcOHDjWHLMGXH7RTezNBlHJeOzhJjhw4MCBY8GR/3LeHJwtFmxGR/nnH26IAwcOHDjWHG185nnUrjucCuz7zxdfBg4cOHDgGHG0qwn5hfK1hs1IadYcvOTDgQMHDhwvcLSLa225tWkR5uXZMIxx4MCBA8eaI/mTs5bfppzbhG5bgj4sNODAgQMHjhFH3v5bFUijUVD+JeWFZfSvOHDgwIFjxJGvL2yWFXKy71q/+2q3OXDgwIEDRzzHn129Den8K2lXH/bFHg4cOHDgeJsjL7rawGuLuqQwaxFx4MCBA8dZjvuHb8uzTVE3axrOYrvYnsCBAwcOHCOOTVuwLZz2A6f2WYqYx4EDBw4chzjakmy2lDYbFLVNzLzw+88JOHDgwIFjzZEcPRsLtee0q3ibNYiHRiEOHDhw4FhzJOXN5rrt8GlDnw+3omDGgQMHDhwlR74QkK+77QO4RWmDNopVHDhw4MCx6JjNmoPtsKdt3s1+bpubD81BHDhw4MAx4siLpfboJD7zcjF5Z/ZV4cCBAweONzj2o6BZ1OXXbYu65Et6eAocOHDgwDHiOBWlm/W1vJybrSngwIEDB47v5ZgVPJux0/3fbYdSs7EWDhw4cODYc+SRmZd2+5FVy7QZR/11Ag4cOHDgOMqxf51tJm4W6YYn48CBAweOMyevBjxvD4FyiCSk68YlDhw4cOAYceQl2axYaovA2WfyUH/4JA4cOHDgWHC0QXWq2RdNw8pBVB7VD81BHDhw4MDxAkd70TbYZhHbhn39BeDAgQMHjkMcB8YzZXtxf8IrcDhw4MCB41AGtUsDSWSeXYxo25EH9jJw4MCBA8caol1BaBcaEuIcKA/d4nwcOHDgwLHm2IRf+6h58/G9pbq2jYgDBw4cOPbdsM1VZgOkWRjPVuuiiMWBAwcOHIc48mbcrBzKW4ezAjL/H8QDEw4cOHDg+DhH/pl8QDVrPu6XIXDgwIEDx/dy5KVaG4r79Yi2OYgDBw4cON7myAundoyUXKIly+9ZE+PAgQMHjjXH2RhrG4XtpWdrDbOhFA4cOHDgKDl+A24vC22rFFxOAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
