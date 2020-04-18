@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java学习之进阶篇 | Aabigale&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="进阶篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习之进阶篇">
+<meta property="og:url" content="www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/index.html">
+<meta property="og:site_name" content="Aabigale&#39;s blog">
+<meta property="og:description" content="进阶篇">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-17T12:04:26.505Z">
+<meta property="article:modified_time" content="2020-04-17T12:04:26.506Z">
+<meta property="article:author" content="Aabigale">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Aabigale&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">Aabigale</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:447539854@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/oakleyi" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java学习之进阶篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#进阶篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">进阶篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java底层知识"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Java底层知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字节码"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">字节码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#class文件格式"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">class文件格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CAFEBABE"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">CAFEBABE</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#位运算"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">位运算</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用位运算实现加、减、乘、除、取余"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">用位运算实现加、减、乘、除、取余</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设计模式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">设计模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计模式的六大原则"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">设计模式的六大原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建型设计模式"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">创建型设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结构型设计模式"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">结构型设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行为型设计模式"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">行为型设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单例的七种写法"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">单例的七种写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么推荐使用枚举实现单例？"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">为什么推荐使用枚举实现单例？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种工厂模式的区别及联系"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">三种工厂模式的区别及联系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#会使用常用设计模式"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">会使用常用设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不用synchronized和lock，实现线程安全的单例模式"><span class="post-toc-number">1.3.9.</span> <span class="post-toc-text">不用synchronized和lock，实现线程安全的单例模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nio和reactor设计模式"><span class="post-toc-number">1.3.10.</span> <span class="post-toc-text">nio和reactor设计模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring中用到了哪些设计模式"><span class="post-toc-number">1.3.11.</span> <span class="post-toc-text">Spring中用到了哪些设计模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络编程知识"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">网络编程知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用协议"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">常用协议</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OSI七层模型"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">OSI七层模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-UDP"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">TCP&#x2F;UDP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-IP"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">TCP&#x2F;IP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">HTTP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-2"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">http&#x2F;2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-RMI，Socket，HttpClient"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">Java RMI，Socket，HttpClient</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-与-session"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">cookie 与 session</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#了解nginx和apache服务器的特性并搭建一个对应的服务器"><span class="post-toc-number">1.4.9.</span> <span class="post-toc-text">了解nginx和apache服务器的特性并搭建一个对应的服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程间通讯的方式"><span class="post-toc-number">1.4.10.</span> <span class="post-toc-text">进程间通讯的方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是CDN？如果实现？"><span class="post-toc-number">1.4.11.</span> <span class="post-toc-text">什么是CDN？如果实现？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DNS？"><span class="post-toc-number">1.4.12.</span> <span class="post-toc-text">DNS？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#反向代理"><span class="post-toc-number">1.4.13.</span> <span class="post-toc-text">反向代理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#框架知识"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">框架知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Servlet"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">Servlet</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hibernate"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">Hibernate</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MyBatis"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">MyBatis</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">Spring</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-MVC"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">Spring MVC</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Boot"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">Spring Boot</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Security"><span class="post-toc-number">1.5.7.</span> <span class="post-toc-text">Spring Security</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Cloud"><span class="post-toc-number">1.5.8.</span> <span class="post-toc-text">Spring Cloud</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#应用服务器知识"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">应用服务器知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JBoss"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">JBoss</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tomcat"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">tomcat</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jetty"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">jetty</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Weblogic"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">Weblogic</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#工具"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-amp-svn"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">git &amp; svn</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#maven-amp-gradle"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">maven &amp; gradle</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git技巧"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">git技巧</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#maven技巧"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">maven技巧</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intellij-IDEA"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">Intellij IDEA</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-Java学习之进阶篇"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java学习之进阶篇</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2020-04-17 20:04:26" datetime="2020-04-17T12:04:26.505Z"  itemprop="datePublished">2020-04-17</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="进阶篇"><a href="#进阶篇" class="headerlink" title="进阶篇"></a>进阶篇</h1><a id="more"></a>
+
+<h2 id="Java底层知识"><a href="#Java底层知识" class="headerlink" title="Java底层知识"></a>Java底层知识</h2><h3 id="字节码"><a href="#字节码" class="headerlink" title="字节码"></a>字节码</h3><h3 id="class文件格式"><a href="#class文件格式" class="headerlink" title="class文件格式"></a>class文件格式</h3><h3 id="CAFEBABE"><a href="#CAFEBABE" class="headerlink" title="CAFEBABE"></a>CAFEBABE</h3><h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="用位运算实现加、减、乘、除、取余"><a href="#用位运算实现加、减、乘、除、取余" class="headerlink" title="用位运算实现加、减、乘、除、取余"></a>用位运算实现加、减、乘、除、取余</h3><h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h3 id="设计模式的六大原则"><a href="#设计模式的六大原则" class="headerlink" title="设计模式的六大原则"></a>设计模式的六大原则</h3><ul>
+<li>开闭原则（Open Close Principle）</li>
+<li>里氏代换原则（Liskov Substitution Principle）</li>
+<li>依赖倒转原则（Dependence Inversion Principle）</li>
+<li>接口隔离原则（Interface Segregation Principle）</li>
+<li>迪米特法则（最少知道原则）（Demeter Principle）</li>
+<li>合成复用原则（Composite Reuse Principle）</li>
+</ul>
+<h3 id="创建型设计模式"><a href="#创建型设计模式" class="headerlink" title="创建型设计模式"></a>创建型设计模式</h3><ul>
+<li>单例模式</li>
+<li>抽象工厂模式</li>
+<li>建造者模式</li>
+<li>工厂模式</li>
+<li>原型模式</li>
+</ul>
+<h3 id="结构型设计模式"><a href="#结构型设计模式" class="headerlink" title="结构型设计模式"></a>结构型设计模式</h3><ul>
+<li>适配器模式</li>
+<li>桥接模式</li>
+<li>装饰模式</li>
+<li>组合模式</li>
+<li>外观模式</li>
+<li>享元模式</li>
+<li>代理模式</li>
+</ul>
+<h3 id="行为型设计模式"><a href="#行为型设计模式" class="headerlink" title="行为型设计模式"></a>行为型设计模式</h3><ul>
+<li>模版方法模式</li>
+<li>命令模式</li>
+<li>迭代器模式</li>
+<li>观察者模式</li>
+<li>中介者模式</li>
+<li>备忘录模式</li>
+<li>解释器模式</li>
+<li>状态模式</li>
+<li>策略模式</li>
+<li>责任链模式</li>
+<li>访问者模式</li>
+</ul>
+<h3 id="单例的七种写法"><a href="#单例的七种写法" class="headerlink" title="单例的七种写法"></a>单例的七种写法</h3><ul>
+<li>懒汉——线程不安全</li>
+<li>懒汉——线程安全</li>
+<li>饿汉</li>
+<li>饿汉——变种</li>
+<li>静态内部类</li>
+<li>枚举</li>
+<li>双重校验锁</li>
+</ul>
+<h3 id="为什么推荐使用枚举实现单例？"><a href="#为什么推荐使用枚举实现单例？" class="headerlink" title="为什么推荐使用枚举实现单例？"></a>为什么推荐使用枚举实现单例？</h3><h3 id="三种工厂模式的区别及联系"><a href="#三种工厂模式的区别及联系" class="headerlink" title="三种工厂模式的区别及联系"></a>三种工厂模式的区别及联系</h3><ul>
+<li>简单工厂、工厂方法、模板工厂</li>
+</ul>
+<h3 id="会使用常用设计模式"><a href="#会使用常用设计模式" class="headerlink" title="会使用常用设计模式"></a>会使用常用设计模式</h3><ul>
+<li>工厂模式</li>
+<li>适配器模式</li>
+<li>策略模式</li>
+<li>模板方法模式</li>
+<li>观察者模式</li>
+<li>外观模式</li>
+<li>代理模式</li>
+</ul>
+<h3 id="不用synchronized和lock，实现线程安全的单例模式"><a href="#不用synchronized和lock，实现线程安全的单例模式" class="headerlink" title="不用synchronized和lock，实现线程安全的单例模式"></a>不用synchronized和lock，实现线程安全的单例模式</h3><h3 id="nio和reactor设计模式"><a href="#nio和reactor设计模式" class="headerlink" title="nio和reactor设计模式"></a>nio和reactor设计模式</h3><h3 id="Spring中用到了哪些设计模式"><a href="#Spring中用到了哪些设计模式" class="headerlink" title="Spring中用到了哪些设计模式"></a>Spring中用到了哪些设计模式</h3><h2 id="网络编程知识"><a href="#网络编程知识" class="headerlink" title="网络编程知识"></a>网络编程知识</h2><h3 id="常用协议"><a href="#常用协议" class="headerlink" title="常用协议"></a>常用协议</h3><ul>
+<li>tcp、udp、http、https</li>
+<li>用Java实现FTP、SMTP协议</li>
+</ul>
+<h3 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h3><ul>
+<li>每一层的主要协议</li>
+</ul>
+<h3 id="TCP-UDP"><a href="#TCP-UDP" class="headerlink" title="TCP/UDP"></a>TCP/UDP</h3><ul>
+<li>三次握手与四次关闭</li>
+<li>流量控制和拥塞控制</li>
+<li>tcp粘包与拆包</li>
+</ul>
+<h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><ul>
+<li>IPV4</li>
+<li>IPV6</li>
+</ul>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
+<li>http/1.0 http/1.1 http/2之间的区别</li>
+<li>http和https的区别</li>
+<li>http中 get和post区别</li>
+<li>常见的web请求返回的状态码</li>
+<li>404、302、301、500分别代表什么</li>
+<li>用Java写一个简单的静态文件的HTTP服务器</li>
+</ul>
+<h3 id="http-2"><a href="#http-2" class="headerlink" title="http/2"></a>http/2</h3><h3 id="Java-RMI，Socket，HttpClient"><a href="#Java-RMI，Socket，HttpClient" class="headerlink" title="Java RMI，Socket，HttpClient"></a>Java RMI，Socket，HttpClient</h3><h3 id="cookie-与-session"><a href="#cookie-与-session" class="headerlink" title="cookie 与 session"></a>cookie 与 session</h3><ul>
+<li>cookie被禁用，如何实现session</li>
+</ul>
+<h3 id="了解nginx和apache服务器的特性并搭建一个对应的服务器"><a href="#了解nginx和apache服务器的特性并搭建一个对应的服务器" class="headerlink" title="了解nginx和apache服务器的特性并搭建一个对应的服务器"></a>了解nginx和apache服务器的特性并搭建一个对应的服务器</h3><h3 id="进程间通讯的方式"><a href="#进程间通讯的方式" class="headerlink" title="进程间通讯的方式"></a>进程间通讯的方式</h3><h3 id="什么是CDN？如果实现？"><a href="#什么是CDN？如果实现？" class="headerlink" title="什么是CDN？如果实现？"></a>什么是CDN？如果实现？</h3><h3 id="DNS？"><a href="#DNS？" class="headerlink" title="DNS？"></a>DNS？</h3><ul>
+<li>什么是DNS</li>
+<li>记录类型:A记录、CNAME记录、AAAA记录等</li>
+<li>域名解析</li>
+<li>根域名服务器</li>
+<li>DNS污染</li>
+<li>DNS劫持</li>
+<li>公共DNS：114 DNS、Google DNS、OpenDNS</li>
+</ul>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><ul>
+<li>正向代理</li>
+<li>反向代理</li>
+<li>反向代理服务器</li>
+</ul>
+<h2 id="框架知识"><a href="#框架知识" class="headerlink" title="框架知识"></a>框架知识</h2><h3 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h3><ul>
+<li>生命周期</li>
+<li>线程安全问题</li>
+<li>filter和listener</li>
+<li>web.xml中常用配置及作用</li>
+</ul>
+<h3 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h3><ul>
+<li>什么是OR Mapping</li>
+<li>Hibernate的缓存机制</li>
+<li>Hibernate的懒加载</li>
+<li>Hibernate/Ibatis/MyBatis之间的区别</li>
+</ul>
+<h3 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h3><ul>
+<li>Mybatis缓存机制</li>
+<li><code>#{}</code>和<code>${}</code>的区别</li>
+<li>mapper中传递多个参数</li>
+<li>Mybatis动态sql</li>
+<li>Mybatis的延迟加载</li>
+</ul>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><ul>
+<li>Bean的初始化</li>
+<li>AOP原理</li>
+<li>实现Spring的IOC</li>
+<li>spring四种依赖注入方式</li>
+</ul>
+<h3 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h3><ul>
+<li>什么是MVC</li>
+<li>Spring mvc与Struts mvc的区别</li>
+</ul>
+<h3 id="Spring-Boot"><a href="#Spring-Boot" class="headerlink" title="Spring Boot"></a>Spring Boot</h3><ul>
+<li>Spring Boot 2.0</li>
+<li>起步依赖</li>
+<li>自动配置</li>
+<li>Spring Boot的starter原理</li>
+<li>自己实现一个starter</li>
+<li>为什么Spring Boot可以通过main启动web项目</li>
+</ul>
+<h3 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h3><h3 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h3><ul>
+<li>服务发现与注册：Eureka、Zookeeper、Consul</li>
+<li>负载均衡：Feign、Spring Cloud Loadbalance</li>
+<li>服务配置：Spring Cloud Config</li>
+<li>服务限流与熔断：Hystrix</li>
+<li>服务链路追踪：Dapper</li>
+<li>服务网关、安全、消息</li>
+</ul>
+<h2 id="应用服务器知识"><a href="#应用服务器知识" class="headerlink" title="应用服务器知识"></a>应用服务器知识</h2><h3 id="JBoss"><a href="#JBoss" class="headerlink" title="JBoss"></a>JBoss</h3><h3 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h3><h3 id="jetty"><a href="#jetty" class="headerlink" title="jetty"></a>jetty</h3><h3 id="Weblogic"><a href="#Weblogic" class="headerlink" title="Weblogic"></a>Weblogic</h3><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="git-amp-svn"><a href="#git-amp-svn" class="headerlink" title="git &amp; svn"></a>git &amp; svn</h3><h3 id="maven-amp-gradle"><a href="#maven-amp-gradle" class="headerlink" title="maven &amp; gradle"></a>maven &amp; gradle</h3><h3 id="git技巧"><a href="#git技巧" class="headerlink" title="git技巧"></a>git技巧</h3><ul>
+<li>分支合并</li>
+<li>冲突解决</li>
+<li>提交回滚</li>
+</ul>
+<h3 id="maven技巧"><a href="#maven技巧" class="headerlink" title="maven技巧"></a>maven技巧</h3><ul>
+<li>依赖树</li>
+<li>依赖仲裁</li>
+</ul>
+<h3 id="Intellij-IDEA"><a href="#Intellij-IDEA" class="headerlink" title="Intellij IDEA"></a>Intellij IDEA</h3><ul>
+<li>常用插件：Maven Helper、FindBugs-IDEA、阿里巴巴代码规约检测、GsonFormat、Lombok plugin、.ignore、Mybatis plugin</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-04-17T12:04:26.506Z" itemprop="dateUpdated">2020-04-17 20:04:26</time>
+</span>
+
+
+        
+        原文链接：<a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" target="_blank" rel="external">www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='www.aabigale.top'">
+            <img src="/img/avatar.jpg" alt="Aabigale">
+            <a>Aabigale</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&title=《Java学习之进阶篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&title=《Java学习之进阶篇》 — Aabigale's blog&source=进阶篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之进阶篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：Java学习之高级篇
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Java学习之底层篇">下一篇：Java学习之底层篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2020
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="www.aabigale.top">tomotoes.com</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license">This blog is licensed under a <a rel="license noopener" rel="external nofollow noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&title=《Java学习之进阶篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&title=《Java学习之进阶篇》 — Aabigale's blog&source=进阶篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之进阶篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLklEQVR42u3awYrjMBAE0Pn/n87CsIeFkGxVSwFbeT4Fj8fWkyEdVevnJz4ev8fzmefzz3/995rkPq+ueXXm1Rg2HNjY2Ng3YT/eHsmt24Emz83H8HzN+/tgY2Njn8pObtd+Xscnpa6dGmxsbOxvZucLj7YgJZj29WBjY2Njrwc9bdwzK1HY2NjY2HmxyR+QLzlydl4IN2dp2NjY2Jdnt43eK3/+YH8bGxsb+5Lsx+iYlav86fk1w/FjY2NjH8SeBUBtrJ/fJ2kP73o6NjY29knsWWnJGwyz+Kktk/mrwsbGxj6J/Ymy0bZs2zZzG/pHKzBsbGzs27Lz7/M80Glbtu2iIo+i/lOxsbGxsY9mtz/u85I2K135/xYibGxs7EPZSQM1j+NnC4a2uA7x2NjY2EewkxKSD7Td7rPrzvnCKepmYGNjY9+QnZeoXXFS20LYtikHGxsb+1D2+l+Toewtb0sTio2NjX0cOxlou3WmnbK2wdCWUmxsbOxvYOdTsNIwyKe1joryLTvY2NjYB7HXy0lyPg/02yZxuxzCxsbGPpWdb6CZPWAWXe3dAFS8f2xsbOwbsvNQKQ/l80ho1oSeLVSK/UrY2NjYt2XPpiBvxLaYtkQV48fGxsY+jp0PN18qRG3XErNSOLGxsbHPY+ct23ZRsd4SWGkYRIsQbGxs7CPYyVIkH2JbAne1n5N2LzY2Nvap7LwPnP/0b9vGw0hoVGixsbGxz2Pn7dWVwKgtP59oJxTvHxsbG/uG7OKLflSQ8q027RQvbSTCxsbGPpTdxjQrZaxdF+RTFk0WNjY29kHsNqBPStdK2csDr9kZbGxs7O9h79ooM4uK3p/Jo6u6gGFjY2Pflj38ol8oY3lUNGswF/0QbGxs7NuyP11g2qioXRq1U/n3MzY2NvZB7JWC1BahPMTPJzG5cluuho2NjX1hdts0nYVK603lvDRGcRg2Njb2cez8p/+sJZxv1tkbcmFjY2Nj75qCtnm8cs8oCMPGxsb+SvZKUtUuZmbhVGLBxsbGPpWd37S49agpu76wia7HxsbGPoi9shjIo/9ZUUwmPZ+ypf42NjY29hXZfwBNGTATrbhPLgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2020/03/10");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "Aabigale");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
     
     
     
-    <title>数据库系统概述二 | Aabigale&#39;s blog</title>
+    <title>Java学习之底层篇 | Aabigale&#39;s blog</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -39,15 +39,15 @@
 
 
     
-    <meta name="description" content="数据库系统之三–数据建模与数据库设计数据建模：思想与方法为什么要数据建模和数据库设计E - R模型 – 数据建模之基本思想E - R 模型 – 表达方法之 Chen 方法E - R 模型 – 表达方法之 Crow’s foot 方法数据建模之案例讲解数据库设计中的抽象123该部分的重难点* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow&#39;s foot 表达方法* 熟练">
+    <meta name="description" content="底层篇">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库系统概述二">
-<meta property="og:url" content="www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/index.html">
+<meta property="og:title" content="Java学习之底层篇">
+<meta property="og:url" content="www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/index.html">
 <meta property="og:site_name" content="Aabigale&#39;s blog">
-<meta property="og:description" content="数据库系统之三–数据建模与数据库设计数据建模：思想与方法为什么要数据建模和数据库设计E - R模型 – 数据建模之基本思想E - R 模型 – 表达方法之 Chen 方法E - R 模型 – 表达方法之 Crow’s foot 方法数据建模之案例讲解数据库设计中的抽象123该部分的重难点* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow&#39;s foot 表达方法* 熟练">
+<meta property="og:description" content="底层篇">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-10T08:26:01.025Z">
-<meta property="article:modified_time" content="2020-04-12T05:46:52.804Z">
+<meta property="article:published_time" content="2020-04-17T11:53:08.718Z">
+<meta property="article:modified_time" content="2020-04-17T11:53:08.719Z">
 <meta property="article:author" content="Aabigale">
 <meta name="twitter:card" content="summary">
     
@@ -151,7 +151,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">数据库系统概述二</div>
+        <div class="flex-col header-title ellipsis">Java学习之底层篇</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -191,19 +191,19 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据库系统之三–数据建模与数据库设计"><span class="post-toc-number">1.</span> <span class="post-toc-text">数据库系统之三–数据建模与数据库设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据建模：思想与方法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数据建模：思想与方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么要数据建模和数据库设计"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">为什么要数据建模和数据库设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R模型-–-数据建模之基本思想"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">E - R模型 – 数据建模之基本思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-模型-–-表达方法之-Chen-方法"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">E - R 模型 – 表达方法之 Chen 方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-模型-–-表达方法之-Crow’s-foot-方法"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">E - R 模型 – 表达方法之 Crow’s foot 方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据建模之案例讲解"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">数据建模之案例讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计中的抽象"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">数据库设计中的抽象</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">12</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库设计过程"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">数据库设计过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计过程与设计方法"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">数据库设计过程与设计方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#E-R-图-IDEF1X-向关系模式的转换"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">E - R 图 &#x2F; IDEF1X 向关系模式的转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不正确数据库设计引发的问题及其解决"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">不正确数据库设计引发的问题及其解决</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#底层篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">底层篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JVM"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">JVM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JVM内存结构"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">JVM内存结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#垃圾回收"><span class="post-toc-number">1.0.1.2.</span> <span class="post-toc-text">垃圾回收</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JVM参数及调优"><span class="post-toc-number">1.0.1.3.</span> <span class="post-toc-text">JVM参数及调优</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Java对象模型"><span class="post-toc-number">1.0.1.4.</span> <span class="post-toc-text">Java对象模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HotSpot"><span class="post-toc-number">1.0.1.5.</span> <span class="post-toc-text">HotSpot</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Java内存模型"><span class="post-toc-number">1.0.1.6.</span> <span class="post-toc-text">Java内存模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#虚拟机性能监控与故障处理工具"><span class="post-toc-number">1.0.1.7.</span> <span class="post-toc-text">虚拟机性能监控与故障处理工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#类加载机制"><span class="post-toc-number">1.0.1.8.</span> <span class="post-toc-text">类加载机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#打包工具"><span class="post-toc-number">1.0.1.9.</span> <span class="post-toc-text">打包工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编译与反编译"><span class="post-toc-number">1.0.1.10.</span> <span class="post-toc-text">编译与反编译</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JIT"><span class="post-toc-number">1.0.1.11.</span> <span class="post-toc-text">JIT</span></a></li></ol></li></ol></li></ol></li></ol>
         </nav>
     </aside>
    
-<article id="post-数据库系统概述二"
+<article id="post-Java学习之底层篇"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">数据库系统概述二</h1>
+        <h1 class="post-card-title">Java学习之底层篇</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2020-04-10 16:26:01" datetime="2020-04-10T08:26:01.025Z"  itemprop="datePublished">2020-04-10</time>
+            <time class="post-time" title="2020-04-17 19:53:08" datetime="2020-04-17T11:53:08.718Z"  itemprop="datePublished">2020-04-17</time>
 
             <br id="mybreak"/>
             
@@ -225,12 +225,91 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="数据库系统之三–数据建模与数据库设计"><a href="#数据库系统之三–数据建模与数据库设计" class="headerlink" title="数据库系统之三–数据建模与数据库设计"></a>数据库系统之三–数据建模与数据库设计</h1><h2 id="数据建模：思想与方法"><a href="#数据建模：思想与方法" class="headerlink" title="数据建模：思想与方法"></a>数据建模：思想与方法</h2><h3 id="为什么要数据建模和数据库设计"><a href="#为什么要数据建模和数据库设计" class="headerlink" title="为什么要数据建模和数据库设计"></a>为什么要数据建模和数据库设计</h3><h3 id="E-R模型-–-数据建模之基本思想"><a href="#E-R模型-–-数据建模之基本思想" class="headerlink" title="E - R模型 – 数据建模之基本思想"></a>E - R模型 – 数据建模之基本思想</h3><h3 id="E-R-模型-–-表达方法之-Chen-方法"><a href="#E-R-模型-–-表达方法之-Chen-方法" class="headerlink" title="E - R 模型 – 表达方法之 Chen 方法"></a>E - R 模型 – 表达方法之 Chen 方法</h3><h3 id="E-R-模型-–-表达方法之-Crow’s-foot-方法"><a href="#E-R-模型-–-表达方法之-Crow’s-foot-方法" class="headerlink" title="E - R 模型 – 表达方法之 Crow’s foot 方法"></a>E - R 模型 – 表达方法之 Crow’s foot 方法</h3><h3 id="数据建模之案例讲解"><a href="#数据建模之案例讲解" class="headerlink" title="数据建模之案例讲解"></a>数据建模之案例讲解</h3><h3 id="数据库设计中的抽象"><a href="#数据库设计中的抽象" class="headerlink" title="数据库设计中的抽象"></a>数据库设计中的抽象</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该部分的重难点</span><br><span class="line">* 理解 E-R 模型进行数据模型的基本思想，熟练掌握 E-R 模型的 Crow's foot 表达方法</span><br><span class="line">* 熟练运用 Crow's foot 方法进行数据建模，即建模训练</span><br></pre></td></tr></tbody></table></figure>
+            <h1 id="底层篇"><a href="#底层篇" class="headerlink" title="底层篇"></a>底层篇</h1><a id="more"></a>
 
-<h2 id="12"><a href="#12" class="headerlink" title="12"></a>12</h2><h2 id="数据库设计过程"><a href="#数据库设计过程" class="headerlink" title="数据库设计过程"></a>数据库设计过程</h2><h3 id="数据库设计过程与设计方法"><a href="#数据库设计过程与设计方法" class="headerlink" title="数据库设计过程与设计方法"></a>数据库设计过程与设计方法</h3><h3 id="E-R-图-IDEF1X-向关系模式的转换"><a href="#E-R-图-IDEF1X-向关系模式的转换" class="headerlink" title="E - R 图 / IDEF1X 向关系模式的转换"></a>E - R 图 / IDEF1X 向关系模式的转换</h3><h3 id="不正确数据库设计引发的问题及其解决"><a href="#不正确数据库设计引发的问题及其解决" class="headerlink" title="不正确数据库设计引发的问题及其解决"></a>不正确数据库设计引发的问题及其解决</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">该部分重难点</span><br><span class="line">* 理解数据库设计的四个过程</span><br><span class="line">* 理解不正确数据库设计引发的问题，为数据库理论的学习奠定问题基础</span><br><span class="line">* 理解不正确数据库设计引发的问题，提升数据建模与数据库设计能力</span><br></pre></td></tr></tbody></table></figure>
-
-
-
+<h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><h4 id="JVM内存结构"><a href="#JVM内存结构" class="headerlink" title="JVM内存结构"></a>JVM内存结构</h4><ul>
+<li>运行时数据区</li>
+<li>运行时数据区哪些是线程独享</li>
+<li>堆和栈区别</li>
+<li>方法区在不同版本JDK中的位置</li>
+<li>堆外内存</li>
+<li>TLAB</li>
+<li><a href="http://hollischuang.gitee.io/tobetopjavaer/?nsukey=RvjaFvLCGPPbjwfwF7XlmqNl09mFjmAUCsru3rF4RjZrjP3y1sovYNNzWc4uLvvXNZVGH5VYcNgRKXca6lQ9M31gH80kzcskWTHY%2BdeAaA%2BE7chi2W7Lpx%2BBa4sSy2GGy4MAIR%2FZYygnD40nwFRgb0h%2BUuTFHNndDfycK3BzLOtbGh4KX0ZQzIJty1n6zz%2B0yN0dk6rdrSREChjhHbQBvA%3D%3D#/basement/jvm/stack-alloc" target="_blank" rel="noopener">Java中的对象一定在堆上分配吗？</a></li>
+</ul>
+<h4 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h4><ul>
+<li>GC算法：标记清除、引用计数、复制、标记压缩、分代回收、增量式回收</li>
+<li>GC参数</li>
+<li>对象存活的判定</li>
+<li>垃圾收集器（CMS、G1、ZGC、Epsilon）</li>
+</ul>
+<h4 id="JVM参数及调优"><a href="#JVM参数及调优" class="headerlink" title="JVM参数及调优"></a>JVM参数及调优</h4><ul>
+<li>-Xmx</li>
+<li>-Xmn</li>
+<li>-Xms</li>
+<li>-Xss</li>
+<li>-XX:SurvivorRatio</li>
+<li>-XX:PermSize</li>
+<li>-XX:MaxPermSize</li>
+<li>-XX:MaxTenuringThreshold</li>
+</ul>
+<h4 id="Java对象模型"><a href="#Java对象模型" class="headerlink" title="Java对象模型"></a>Java对象模型</h4><ul>
+<li>oop-klass</li>
+<li>对象头</li>
+</ul>
+<h4 id="HotSpot"><a href="#HotSpot" class="headerlink" title="HotSpot"></a>HotSpot</h4><ul>
+<li>即时编译器</li>
+<li>编译优化</li>
+</ul>
+<h4 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h4><ul>
+<li>计算机内存模型</li>
+<li>缓存一致性</li>
+<li>MESI协议</li>
+<li>可见性</li>
+<li>原子性</li>
+<li>顺序性</li>
+<li>happens-before</li>
+<li>as-if-serial</li>
+<li>内存屏障</li>
+<li>synchronized</li>
+<li>volatile</li>
+<li>final</li>
+<li>锁</li>
+</ul>
+<h4 id="虚拟机性能监控与故障处理工具"><a href="#虚拟机性能监控与故障处理工具" class="headerlink" title="虚拟机性能监控与故障处理工具"></a>虚拟机性能监控与故障处理工具</h4><ul>
+<li>jps</li>
+<li>jstack</li>
+<li>jmap</li>
+<li>jstat</li>
+<li>jconsole</li>
+<li>jinfo</li>
+<li>jhat</li>
+<li>javap</li>
+<li>btrace</li>
+<li>TProfiler</li>
+<li>jlink</li>
+<li>Arthas</li>
+</ul>
+<h4 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h4><ul>
+<li>classLoader</li>
+<li>类加载过程是线程安全的吗？</li>
+<li>类加载过程</li>
+<li>双亲委派（破坏双亲委派）</li>
+<li>模块化（jboss modules、osgi、jigsaw）</li>
+</ul>
+<h4 id="打包工具"><a href="#打包工具" class="headerlink" title="打包工具"></a>打包工具</h4><ul>
+<li>jar</li>
+<li>jlink</li>
+<li>jpackage</li>
+</ul>
+<h4 id="编译与反编译"><a href="#编译与反编译" class="headerlink" title="编译与反编译"></a>编译与反编译</h4><ul>
+<li>什么是编译</li>
+<li>什么是反编译</li>
+<li>编译工具：javac</li>
+<li>反编译工具：javap 、jad 、CRF</li>
+</ul>
+<h4 id="JIT"><a href="#JIT" class="headerlink" title="JIT"></a>JIT</h4><ul>
+<li>JIT优化（逃逸分析、栈上分配、标量替换、锁优化）</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -256,12 +335,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-04-12T05:46:52.804Z" itemprop="dateUpdated">2020-04-12 13:46:52</time>
+    Last updated: <time datetime="2020-04-17T11:53:08.719Z" itemprop="dateUpdated">2020-04-17 19:53:08</time>
 </span>
 
 
         
-        原文链接：<a href="/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" target="_blank" rel="external">www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/</a>
+        原文链接：<a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" target="_blank" rel="external">www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/</a>
         
     </div>
     <footer>
@@ -291,7 +370,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&title=《Java学习之底层篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -301,22 +380,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&title=《Java学习之底层篇》 — Aabigale's blog&source=底层篇" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库系统概述二》 — Aabigale's blog&url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&via=www.aabigale.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之底层篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -339,9 +418,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" id="post-prev" class="post-nav-link">
+      <a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" id="post-prev" class="post-nav-link">
         <h4 class="title" >
-          上一篇：Java学习之底层篇
+          上一篇：Java学习之进阶篇
         </h4>
       </a>
     </div>
@@ -349,8 +428,8 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/04/09/JAVA%E5%AE%9E%E8%AE%AD%E4%BD%9C%E4%B8%9A/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：JAVA实训作业">下一篇：JAVA实训作业</h4>
+      <a href="/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：数据库系统概述二">下一篇：数据库系统概述二</h4>
       </a>
     </div>
   
@@ -449,7 +528,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&title=《Java学习之底层篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -459,22 +538,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&title=《数据库系统概述二》 — Aabigale's blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&title=《Java学习之底层篇》 — Aabigale's blog&source=底层篇" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库系统概述二》 — Aabigale's blog&url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/&via=www.aabigale.top" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之底层篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/10/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E4%BA%8C/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BA%95%E5%B1%82%E7%AF%87/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -485,7 +564,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADKElEQVR42u3a0a6iQBAEUP//p91knxes6sENjIcn4xWYg4l9u3per/h4/z3O3zk66+jc5Jrndzm6zmUHNjY29kPY79Pj/DPJX48Y51dbeR2tBxsbG3s7drLEtsitFL+jEnWEbNeAjY2N/ZvspIAli05akbZkYmNjY2Pn7FmD8Y1Sh42NjY3dhkp5hDQLgPLH/V+zNGxsbOzbs9tB751ff3G+jY2NjX1L9nt05OcmhSovObOi9Y9rYmNjY2/EbiOhPL45/2QyTmhXVQ+AsbGxsX+AXQfuZYifs9uAKWpUsLGxsbdjJ6PZWVFJhrWzoe/SYAAbGxt7C/asYciLULug/I4rY2lsbGzsndizkrOCX39k7abMKFrCxsbG3og9GxKslJzZ42jjqmIvEjY2NvYD2SsDgO8VmJXvsMjSsLGxsR/OzmFJwTsvWnnANMMXDQw2Njb2Rux6m0v5gPKFJuCVATA2Njb2ruyVoek3NvSsvJ+EWa+VKoqNjY19S3bbfqw0IesFbDY2GE5IsLGxsR/Cbn/6r1rWrPHI1/PBgo2Njb0dezZSbduP9TK5sqpi6djY2NgPZLfj0ja+T7bU5CtZ6SmwsbGx92bn//S31JVYP9k2lDck2NjY2Puxk5/+2TCgDYlm57al90M3ho2Njf1A9mwQ297yqgHtrGn5ULexsbGxH85ul9IOBlYAs8eRtzHY2NjYe7DzG+dB/2yIm7BnV8PGxsb+BfYsXs9DqBaTX234GhsbG3sj9mz7ziysXwmq8vKWfBnY2NjYO7Fbat6uzMpb/vnZyBkbGxt7P3bbHrRlLw/3Z+OEPGDCxsbG3pW9HirNwqBZC3GjLA0bGxv7Nux2mHrV4mbD3XYIHZ2LjY2N/XD2uzzyBmCl2Kxs5YweFjY2NvZG7FkBaB9NHvS3QVXdeGBjY2Nvyp41GElw3zYhVw16o4EBNjY29nbsWYORz0/binpxUzGbXWNjY2Nvys6LTduKJO3NVe9jY2Nj/yZ7Fu7nw9080moLHjY2NvYvsNtApy0h7Ui4DbbyKQA2Njb2fuyVBGZWbNpSNHusFwRS2NjY2Hdn/wEEAk8C/D4zqQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADPElEQVR42u3a0U7DQAwEwP7/TxeJV2i7tg8pMZMnFNIkc5VYbN/jER/P7+PV+Z+/ff443t/n1afePze55+jAxsbGvgn7+fao8nqwnPd+KQv3x8bGxl7HzkMiD7MkwJLFza9PLNjY2Nj/mZ0/shcwSZglQYuNjY2N3YuW6j2TaHxf/FTDFRsbG3s3exIMSUT1ntUrkw730rCxsbEvz64G0pV//sP5NjY2NvYl2c/WkQ9ie3fuhVzhKdjY2NiL2Pm2mKS1lF+fbwDqvVVUSmFjY2OvYOft+PkAIBk29Ba9Gm/Y2NjYW9n5Bp3eOKG6oL3BQLSI2NjY2OvYvXbSZIQwKTmqA91f3gQbGxt7EXuyyTIPv+pT8iitTnIP7C3FxsbGvhg7KQaSf/EnI9jJ4Db5Sn5ZLGxsbOyl7GoI9YInnz9X360ZYNjY2Ng3Z8+bPtUI7LWBqqEVjRCwsbGxV7CTYiMZqZ5qFeVhli/cy+8ZGxsbewW7VwY8gqNaeCSxVy2ZCqUINjY29m3Zk9KiVzDkMVldjmibDjY2NvZS9iQ8qqVFsgUnKUvy8gMbGxt7N7vwR784oJ3coVrkJEH78inY2NjYK9h5aTG5slda9MKv8D1jY2NjL2KfGtbmY+N5yI0GG9jY2NiL2Pm2mN4kuXrnyc/l4TQ2Njb2zdn54yet+ep9qp8qvyE2Njb2anbejj8VaaeWo1D2YGNjYy9lTzbo5KTeNUloFd4TGxsbex272gDqtaXmC1QNwmgego2NjX1zdgI4Gz952FQXqzrYwMbGxt7BTkqR/FV6g9vkmIyfP4wHsLGxsW/OzmOsmYStMW3+6r0z2NjY2JvYvUFvb+POqSZUHqIvz2NjY2MvYk9aS/PmUXXzTR6Ek+uxsbGx78V+Fo/ekLgaNtVCKLlbYYaAjY2NfSt2r8HUi73emCEf7o4262BjY2PfnF0dslaHu/lQOR8eV9tJH6bc2NjY2CvY1bFrvhx5BB5O3aQOw8bGxv6X7LxlPwm5vHRJ3uFAgGFjY2OvYJ8NuV7rKh9XfBhUYGNjY69jV4epefkx/9SpOBz10rCxsbEvzK62Zs5GUfX8ZMww6khhY2NjX5H9BUcE1JismDzhAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

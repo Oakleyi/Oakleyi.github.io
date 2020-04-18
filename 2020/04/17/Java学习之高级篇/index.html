@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Java学习之高级篇 | Aabigale&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="高级篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习之高级篇">
+<meta property="og:url" content="www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/index.html">
+<meta property="og:site_name" content="Aabigale&#39;s blog">
+<meta property="og:description" content="高级篇">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-17T12:18:51.793Z">
+<meta property="article:modified_time" content="2020-04-17T12:18:51.794Z">
+<meta property="article:author" content="Aabigale">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Aabigale&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">Aabigale</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:447539854@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/oakleyi" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java学习之高级篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#高级篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">高级篇</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#新技术"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">新技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-9"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Java 9</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-10"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Java 10</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-11"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Java 11</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-12"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Java 12</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-13"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Java 13</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java-14"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Java 14</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-5"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Spring 5</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spring-Boot-2-0"><span class="post-toc-number">1.1.8.</span> <span class="post-toc-text">Spring Boot 2.0</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能优化"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">性能优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用单例"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">使用单例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用Future模式"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">使用Future模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用线程池"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">使用线程池</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择就绪"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">选择就绪</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#减少上下文切换"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">减少上下文切换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#减少锁粒度"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">减少锁粒度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据压缩"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">数据压缩</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结果缓存"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">结果缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Stream并行流"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">Stream并行流</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GC调优"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">GC调优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JVM内存分配调优"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">JVM内存分配调优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL调优"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">SQL调优</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线上问题分析"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">线上问题分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dump"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">dump</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dump获取及分析工具"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">dump获取及分析工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dump分析死锁"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">dump分析死锁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dump分析内存泄露"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">dump分析内存泄露</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己编写各种outofmemory，stackoverflow程序"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">自己编写各种outofmemory，stackoverflow程序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Arthas"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">Arthas</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见问题解决思路"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">常见问题解决思路</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用工具尝试解决以下问题，并写下总结"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">使用工具尝试解决以下问题，并写下总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编译原理知识"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">编译原理知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编译与反编译"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">编译与反编译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java代码的编译与反编译"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">Java代码的编译与反编译</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java的反编译工具"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Java的反编译工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#即时编译器"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">即时编译器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作系统知识"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">操作系统知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linux的常用命令"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">Linux的常用命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程间通信"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">进程间通信</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#服务器性能指标"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">服务器性能指标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程同步"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">进程同步</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缓冲区溢出"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">缓冲区溢出</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分段和分页"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">分段和分页</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟内存与主存"><span class="post-toc-number">1.5.7.</span> <span class="post-toc-text">虚拟内存与主存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟内存管理"><span class="post-toc-number">1.5.8.</span> <span class="post-toc-text">虚拟内存管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#换页算法"><span class="post-toc-number">1.5.9.</span> <span class="post-toc-text">换页算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库知识"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">数据库知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MySql-执行引擎"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">MySql 执行引擎</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MySQL-执行计划"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">MySQL 执行计划</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#索引"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">索引</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#回表"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">回表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL优化"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">SQL优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库事务和隔离级别"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">数据库事务和隔离级别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编码方式"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">编码方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行数统计"><span class="post-toc-number">1.6.8.</span> <span class="post-toc-text">行数统计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库锁"><span class="post-toc-number">1.6.9.</span> <span class="post-toc-text">数据库锁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#连接"><span class="post-toc-number">1.6.10.</span> <span class="post-toc-text">连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库主备搭建"><span class="post-toc-number">1.6.11.</span> <span class="post-toc-text">数据库主备搭建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#log"><span class="post-toc-number">1.6.12.</span> <span class="post-toc-text">log</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内存数据库"><span class="post-toc-number">1.6.13.</span> <span class="post-toc-text">内存数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分库分表"><span class="post-toc-number">1.6.14.</span> <span class="post-toc-text">分库分表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#读写分离"><span class="post-toc-number">1.6.15.</span> <span class="post-toc-text">读写分离</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用的nosql数据库"><span class="post-toc-number">1.6.16.</span> <span class="post-toc-text">常用的nosql数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分别使用数据库锁、NoSql实现分布式锁"><span class="post-toc-number">1.6.17.</span> <span class="post-toc-text">分别使用数据库锁、NoSql实现分布式锁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#性能调优"><span class="post-toc-number">1.6.18.</span> <span class="post-toc-text">性能调优</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库连接池"><span class="post-toc-number">1.6.19.</span> <span class="post-toc-text">数据库连接池</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据结构与算法知识"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">数据结构与算法知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简单的数据结构"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">简单的数据结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#树"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#堆"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">堆</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#稳定的排序算法"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">稳定的排序算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不稳定的排序算法"><span class="post-toc-number">1.7.6.</span> <span class="post-toc-text">不稳定的排序算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#各种排序算法和时间复杂度"><span class="post-toc-number">1.7.7.</span> <span class="post-toc-text">各种排序算法和时间复杂度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#深度优先和广度优先搜索"><span class="post-toc-number">1.7.8.</span> <span class="post-toc-text">深度优先和广度优先搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全排列"><span class="post-toc-number">1.7.9.</span> <span class="post-toc-text">全排列</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#贪心算法"><span class="post-toc-number">1.7.10.</span> <span class="post-toc-text">贪心算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#KMP算法"><span class="post-toc-number">1.7.11.</span> <span class="post-toc-text">KMP算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hash算法"><span class="post-toc-number">1.7.12.</span> <span class="post-toc-text">hash算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#海量数据处理"><span class="post-toc-number">1.7.13.</span> <span class="post-toc-text">海量数据处理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#大数据知识"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">大数据知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#搜索"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#流式计算"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">流式计算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hadoop，离线计算"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">Hadoop，离线计算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分布式日志收集"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">分布式日志收集</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据挖掘"><span class="post-toc-number">1.8.5.</span> <span class="post-toc-text">数据挖掘</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络安全知识"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">网络安全知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">XSS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">CSRF</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注入攻击"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">注入攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件上传漏洞"><span class="post-toc-number">1.9.4.</span> <span class="post-toc-text">文件上传漏洞</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加密与解密"><span class="post-toc-number">1.9.5.</span> <span class="post-toc-text">加密与解密</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加密算法"><span class="post-toc-number">1.9.6.</span> <span class="post-toc-text">加密算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#彩虹表"><span class="post-toc-number">1.9.7.</span> <span class="post-toc-text">彩虹表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DDOS攻击"><span class="post-toc-number">1.9.8.</span> <span class="post-toc-text">DDOS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOS攻击"><span class="post-toc-number">1.9.9.</span> <span class="post-toc-text">DOS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DDOS攻击-1"><span class="post-toc-number">1.9.10.</span> <span class="post-toc-text">DDOS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#memcached为什么可以导致DDos攻击"><span class="post-toc-number">1.9.11.</span> <span class="post-toc-text">memcached为什么可以导致DDos攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是反射型DDoS"><span class="post-toc-number">1.9.12.</span> <span class="post-toc-text">什么是反射型DDoS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何通过Hash碰撞进行DOS攻击"><span class="post-toc-number">1.9.13.</span> <span class="post-toc-text">如何通过Hash碰撞进行DOS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSL、TLS，HTTPS"><span class="post-toc-number">1.9.14.</span> <span class="post-toc-text">SSL、TLS，HTTPS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#脱库、洗库、撞库"><span class="post-toc-number">1.9.15.</span> <span class="post-toc-text">脱库、洗库、撞库</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-Java学习之高级篇"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java学习之高级篇</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2020-04-17 20:18:51" datetime="2020-04-17T12:18:51.793Z"  itemprop="datePublished">2020-04-17</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">4</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="高级篇"><a href="#高级篇" class="headerlink" title="高级篇"></a>高级篇</h1><a id="more"></a>
+
+<h2 id="新技术"><a href="#新技术" class="headerlink" title="新技术"></a>新技术</h2><h3 id="Java-9"><a href="#Java-9" class="headerlink" title="Java 9"></a>Java 9</h3><ul>
+<li>Jigsaw</li>
+<li>Jshell</li>
+<li>Reactive Streams</li>
+</ul>
+<h3 id="Java-10"><a href="#Java-10" class="headerlink" title="Java 10"></a>Java 10</h3><ul>
+<li>局部变量类型推断</li>
+<li>G1的并行Full GC</li>
+<li>ThreadLocal握手机制</li>
+</ul>
+<h3 id="Java-11"><a href="#Java-11" class="headerlink" title="Java 11"></a>Java 11</h3><ul>
+<li>ZGC</li>
+<li>Epsilon</li>
+<li>增强var</li>
+</ul>
+<h3 id="Java-12"><a href="#Java-12" class="headerlink" title="Java 12"></a>Java 12</h3><ul>
+<li>Switch 表达式</li>
+</ul>
+<h3 id="Java-13"><a href="#Java-13" class="headerlink" title="Java 13"></a>Java 13</h3><ul>
+<li>Text Blocks</li>
+<li>Dynamic CDS Archives</li>
+</ul>
+<h3 id="Java-14"><a href="#Java-14" class="headerlink" title="Java 14"></a>Java 14</h3><ul>
+<li>Java打包工具</li>
+<li>更有价值的NullPointerException</li>
+<li>record类型</li>
+</ul>
+<h3 id="Spring-5"><a href="#Spring-5" class="headerlink" title="Spring 5"></a>Spring 5</h3><ul>
+<li>响应式编程</li>
+</ul>
+<h3 id="Spring-Boot-2-0"><a href="#Spring-Boot-2-0" class="headerlink" title="Spring Boot 2.0"></a>Spring Boot 2.0</h3><ul>
+<li>http/2</li>
+<li>http/3</li>
+</ul>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="使用单例"><a href="#使用单例" class="headerlink" title="使用单例"></a>使用单例</h3><h3 id="使用Future模式"><a href="#使用Future模式" class="headerlink" title="使用Future模式"></a>使用Future模式</h3><h3 id="使用线程池"><a href="#使用线程池" class="headerlink" title="使用线程池"></a>使用线程池</h3><h3 id="选择就绪"><a href="#选择就绪" class="headerlink" title="选择就绪"></a>选择就绪</h3><h3 id="减少上下文切换"><a href="#减少上下文切换" class="headerlink" title="减少上下文切换"></a>减少上下文切换</h3><h3 id="减少锁粒度"><a href="#减少锁粒度" class="headerlink" title="减少锁粒度"></a>减少锁粒度</h3><h3 id="数据压缩"><a href="#数据压缩" class="headerlink" title="数据压缩"></a>数据压缩</h3><h3 id="结果缓存"><a href="#结果缓存" class="headerlink" title="结果缓存"></a>结果缓存</h3><h3 id="Stream并行流"><a href="#Stream并行流" class="headerlink" title="Stream并行流"></a>Stream并行流</h3><h3 id="GC调优"><a href="#GC调优" class="headerlink" title="GC调优"></a>GC调优</h3><h3 id="JVM内存分配调优"><a href="#JVM内存分配调优" class="headerlink" title="JVM内存分配调优"></a>JVM内存分配调优</h3><h3 id="SQL调优"><a href="#SQL调优" class="headerlink" title="SQL调优"></a>SQL调优</h3><h2 id="线上问题分析"><a href="#线上问题分析" class="headerlink" title="线上问题分析"></a>线上问题分析</h2><h3 id="dump"><a href="#dump" class="headerlink" title="dump"></a>dump</h3><ul>
+<li>线程Dump</li>
+<li>内存Dump</li>
+<li>gc情况</li>
+</ul>
+<h3 id="dump获取及分析工具"><a href="#dump获取及分析工具" class="headerlink" title="dump获取及分析工具"></a>dump获取及分析工具</h3><ul>
+<li>jstack</li>
+<li>jstat</li>
+<li>jmap</li>
+<li>jhat</li>
+<li>Arthas</li>
+</ul>
+<h3 id="dump分析死锁"><a href="#dump分析死锁" class="headerlink" title="dump分析死锁"></a>dump分析死锁</h3><h3 id="dump分析内存泄露"><a href="#dump分析内存泄露" class="headerlink" title="dump分析内存泄露"></a>dump分析内存泄露</h3><h3 id="自己编写各种outofmemory，stackoverflow程序"><a href="#自己编写各种outofmemory，stackoverflow程序" class="headerlink" title="自己编写各种outofmemory，stackoverflow程序"></a>自己编写各种outofmemory，stackoverflow程序</h3><ul>
+<li>HeapOutOfMemory</li>
+<li>Young OutOfMemory</li>
+<li>MethodArea OutOfMemory</li>
+<li>ConstantPool OutOfMemory</li>
+<li>DirectMemory OutOfMemory</li>
+<li>Stack OutOfMemory Stack OverFlow</li>
+</ul>
+<h3 id="Arthas"><a href="#Arthas" class="headerlink" title="Arthas"></a>Arthas</h3><ul>
+<li>jvm相关</li>
+<li>class/classloader相关</li>
+<li>monitor/watch/trace相关</li>
+<li>options</li>
+<li>管道</li>
+<li>后台异步任务</li>
+</ul>
+<h3 id="常见问题解决思路"><a href="#常见问题解决思路" class="headerlink" title="常见问题解决思路"></a>常见问题解决思路</h3><ul>
+<li>内存溢出</li>
+<li>线程死锁</li>
+<li>类加载冲突</li>
+<li>load飙高</li>
+<li>CPU利用率飙高</li>
+<li>慢SQL</li>
+</ul>
+<h3 id="使用工具尝试解决以下问题，并写下总结"><a href="#使用工具尝试解决以下问题，并写下总结" class="headerlink" title="使用工具尝试解决以下问题，并写下总结"></a>使用工具尝试解决以下问题，并写下总结</h3><ul>
+<li>当一个Java程序响应很慢时如何查找问题</li>
+<li>当一个Java程序频繁FullGC时如何解决问题</li>
+<li>如何查看垃圾回收日志</li>
+<li>当一个Java应用发生OutOfMemory时该如何解决</li>
+<li>如何判断是否出现死锁</li>
+<li>如何判断是否存在内存泄露</li>
+<li>使用Arthas快速排查Spring Boot应用404/401问题</li>
+<li>使用Arthas排查线上应用日志打满问题</li>
+<li>利用Arthas排查Spring Boot应用NoSuchMethodError</li>
+</ul>
+<h2 id="编译原理知识"><a href="#编译原理知识" class="headerlink" title="编译原理知识"></a>编译原理知识</h2><h3 id="编译与反编译"><a href="#编译与反编译" class="headerlink" title="编译与反编译"></a>编译与反编译</h3><h3 id="Java代码的编译与反编译"><a href="#Java代码的编译与反编译" class="headerlink" title="Java代码的编译与反编译"></a>Java代码的编译与反编译</h3><h3 id="Java的反编译工具"><a href="#Java的反编译工具" class="headerlink" title="Java的反编译工具"></a>Java的反编译工具</h3><ul>
+<li>javap</li>
+<li>jad</li>
+<li>CRF</li>
+</ul>
+<h3 id="即时编译器"><a href="#即时编译器" class="headerlink" title="即时编译器"></a>即时编译器</h3><ul>
+<li>编译器优化</li>
+</ul>
+<h2 id="操作系统知识"><a href="#操作系统知识" class="headerlink" title="操作系统知识"></a>操作系统知识</h2><h3 id="Linux的常用命令"><a href="#Linux的常用命令" class="headerlink" title="Linux的常用命令"></a>Linux的常用命令</h3><ul>
+<li>find、grep、ps、cp、move、tar、head、tail、netstat、lsof、tree、wget、curl、ping、ssh、echo、free、top</li>
+</ul>
+<h3 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h3><h3 id="服务器性能指标"><a href="#服务器性能指标" class="headerlink" title="服务器性能指标"></a>服务器性能指标</h3><ul>
+<li>load</li>
+<li>CPU利用率</li>
+<li>内存使用情况</li>
+<li>qps</li>
+<li>rt</li>
+</ul>
+<h3 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h3><ul>
+<li>生产者消费者问题</li>
+<li>哲学家就餐问题</li>
+<li>读者写者问题</li>
+</ul>
+<h3 id="缓冲区溢出"><a href="#缓冲区溢出" class="headerlink" title="缓冲区溢出"></a>缓冲区溢出</h3><h3 id="分段和分页"><a href="#分段和分页" class="headerlink" title="分段和分页"></a>分段和分页</h3><h3 id="虚拟内存与主存"><a href="#虚拟内存与主存" class="headerlink" title="虚拟内存与主存"></a>虚拟内存与主存</h3><h3 id="虚拟内存管理"><a href="#虚拟内存管理" class="headerlink" title="虚拟内存管理"></a>虚拟内存管理</h3><h3 id="换页算法"><a href="#换页算法" class="headerlink" title="换页算法"></a>换页算法</h3><h2 id="数据库知识"><a href="#数据库知识" class="headerlink" title="数据库知识"></a>数据库知识</h2><h3 id="MySql-执行引擎"><a href="#MySql-执行引擎" class="headerlink" title="MySql 执行引擎"></a>MySql 执行引擎</h3><h3 id="MySQL-执行计划"><a href="#MySQL-执行计划" class="headerlink" title="MySQL 执行计划"></a>MySQL 执行计划</h3><ul>
+<li>如何查看执行计划</li>
+<li>如何根据执行计划进行SQL优化</li>
+</ul>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><ul>
+<li>Hash索引&amp;B树索引</li>
+<li>普通索引&amp;唯一索引</li>
+<li>聚集索引&amp;非聚集索引</li>
+<li>覆盖索引</li>
+<li>最左前缀原则</li>
+<li>索引下推</li>
+<li>索引失效</li>
+</ul>
+<h3 id="回表"><a href="#回表" class="headerlink" title="回表"></a>回表</h3><h3 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h3><h3 id="数据库事务和隔离级别"><a href="#数据库事务和隔离级别" class="headerlink" title="数据库事务和隔离级别"></a>数据库事务和隔离级别</h3><ul>
+<li>事务的ACID</li>
+<li>事务的隔离级别与读现象</li>
+<li>事务能不能实现锁的功能</li>
+</ul>
+<h3 id="编码方式"><a href="#编码方式" class="headerlink" title="编码方式"></a>编码方式</h3><ul>
+<li>utf8</li>
+<li>utf8mb4</li>
+<li>为什么不要在数据库中使用utf8编码</li>
+</ul>
+<h3 id="行数统计"><a href="#行数统计" class="headerlink" title="行数统计"></a>行数统计</h3><ul>
+<li>count(1)、count(*)、count(字段)的区别</li>
+<li>为什么建议使用count(*)</li>
+</ul>
+<h3 id="数据库锁"><a href="#数据库锁" class="headerlink" title="数据库锁"></a>数据库锁</h3><ul>
+<li>共享锁、排它锁</li>
+<li>行锁、表锁</li>
+<li>乐观锁、悲观锁</li>
+<li>使用数据库锁实现乐观锁</li>
+<li>Gap Lock、Next-Key Lock</li>
+</ul>
+<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><ul>
+<li>内连接</li>
+<li>左连接</li>
+<li>右连接</li>
+</ul>
+<h3 id="数据库主备搭建"><a href="#数据库主备搭建" class="headerlink" title="数据库主备搭建"></a>数据库主备搭建</h3><h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><ul>
+<li>binlog</li>
+<li>redolog</li>
+</ul>
+<h3 id="内存数据库"><a href="#内存数据库" class="headerlink" title="内存数据库"></a>内存数据库</h3><ul>
+<li>h2</li>
+</ul>
+<h3 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h3><h3 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h3><h3 id="常用的nosql数据库"><a href="#常用的nosql数据库" class="headerlink" title="常用的nosql数据库"></a>常用的nosql数据库</h3><ul>
+<li>redis</li>
+<li>memcached</li>
+</ul>
+<h3 id="分别使用数据库锁、NoSql实现分布式锁"><a href="#分别使用数据库锁、NoSql实现分布式锁" class="headerlink" title="分别使用数据库锁、NoSql实现分布式锁"></a>分别使用数据库锁、NoSql实现分布式锁</h3><h3 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h3><h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><h2 id="数据结构与算法知识"><a href="#数据结构与算法知识" class="headerlink" title="数据结构与算法知识"></a>数据结构与算法知识</h2><h3 id="简单的数据结构"><a href="#简单的数据结构" class="headerlink" title="简单的数据结构"></a>简单的数据结构</h3><ul>
+<li>栈</li>
+<li>队列</li>
+<li>链表</li>
+<li>数组</li>
+<li>哈希表</li>
+<li>栈和队列的相同和不同之处</li>
+<li>栈通常采用的两种存储结构</li>
+<li>两个栈实现队列，和两个队列实现栈</li>
+</ul>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><ul>
+<li>二叉树</li>
+<li>字典树</li>
+<li>平衡树</li>
+<li>排序树</li>
+<li>B树</li>
+<li>B+树</li>
+<li>R树</li>
+<li>多路树</li>
+<li>红黑树</li>
+</ul>
+<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><ul>
+<li>大根堆</li>
+<li>小根堆</li>
+</ul>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><ul>
+<li>有向图</li>
+<li>无向图</li>
+<li>拓扑</li>
+</ul>
+<h3 id="稳定的排序算法"><a href="#稳定的排序算法" class="headerlink" title="稳定的排序算法"></a>稳定的排序算法</h3><ul>
+<li>冒泡排序</li>
+<li>插入排序</li>
+<li>鸡尾酒排序</li>
+<li>桶排序</li>
+<li>计数排序</li>
+<li>归并排序</li>
+<li>原地归并排序</li>
+<li>二叉排序树排序</li>
+<li>鸽巢排序</li>
+<li>基数排序</li>
+<li>侏儒排序</li>
+<li>图书馆排序</li>
+<li>块排序</li>
+</ul>
+<h3 id="不稳定的排序算法"><a href="#不稳定的排序算法" class="headerlink" title="不稳定的排序算法"></a>不稳定的排序算法</h3><ul>
+<li>选择排序</li>
+<li>希尔排序</li>
+<li>Clover排序算法</li>
+<li>梳排序</li>
+<li>堆排序</li>
+<li>平滑排序</li>
+<li>快速排序</li>
+<li>内省排序</li>
+<li>耐心排序</li>
+</ul>
+<h3 id="各种排序算法和时间复杂度"><a href="#各种排序算法和时间复杂度" class="headerlink" title="各种排序算法和时间复杂度"></a>各种排序算法和时间复杂度</h3><h3 id="深度优先和广度优先搜索"><a href="#深度优先和广度优先搜索" class="headerlink" title="深度优先和广度优先搜索"></a>深度优先和广度优先搜索</h3><h3 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h3><h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><h3 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h3><h3 id="hash算法"><a href="#hash算法" class="headerlink" title="hash算法"></a>hash算法</h3><h3 id="海量数据处理"><a href="#海量数据处理" class="headerlink" title="海量数据处理"></a>海量数据处理</h3><ul>
+<li>分治</li>
+<li>hash映射</li>
+<li>堆排序</li>
+<li>双层桶划分</li>
+<li>Bloom Filter</li>
+<li>bitmap</li>
+<li>数据库索引</li>
+<li>mapreduce等。</li>
+</ul>
+<h2 id="大数据知识"><a href="#大数据知识" class="headerlink" title="大数据知识"></a>大数据知识</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><ul>
+<li>Solr</li>
+<li>Lucene</li>
+<li>ElasticSearch</li>
+</ul>
+<h3 id="流式计算"><a href="#流式计算" class="headerlink" title="流式计算"></a>流式计算</h3><ul>
+<li>Storm</li>
+<li>Spark</li>
+<li>Flink</li>
+</ul>
+<h3 id="Hadoop，离线计算"><a href="#Hadoop，离线计算" class="headerlink" title="Hadoop，离线计算"></a>Hadoop，离线计算</h3><ul>
+<li>HDFS</li>
+<li>MapReduce</li>
+</ul>
+<h3 id="分布式日志收集"><a href="#分布式日志收集" class="headerlink" title="分布式日志收集"></a>分布式日志收集</h3><ul>
+<li>flume</li>
+<li>kafka</li>
+<li>logstash</li>
+</ul>
+<h3 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h3><ul>
+<li>mahout</li>
+</ul>
+<h2 id="网络安全知识"><a href="#网络安全知识" class="headerlink" title="网络安全知识"></a>网络安全知识</h2><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
+<li>XSS的防御</li>
+</ul>
+<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><h3 id="注入攻击"><a href="#注入攻击" class="headerlink" title="注入攻击"></a>注入攻击</h3><ul>
+<li>SQL注入</li>
+<li>XML注入</li>
+<li>CRLF注入</li>
+</ul>
+<h3 id="文件上传漏洞"><a href="#文件上传漏洞" class="headerlink" title="文件上传漏洞"></a>文件上传漏洞</h3><h3 id="加密与解密"><a href="#加密与解密" class="headerlink" title="加密与解密"></a>加密与解密</h3><ul>
+<li>对称加密</li>
+<li>非对称加密</li>
+<li>哈希算法</li>
+<li>加盐哈希算法</li>
+</ul>
+<h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><ul>
+<li>MD5，SHA1、DES、AES、RSA、DSA</li>
+</ul>
+<h3 id="彩虹表"><a href="#彩虹表" class="headerlink" title="彩虹表"></a>彩虹表</h3><h3 id="DDOS攻击"><a href="#DDOS攻击" class="headerlink" title="DDOS攻击"></a>DDOS攻击</h3><h3 id="DOS攻击"><a href="#DOS攻击" class="headerlink" title="DOS攻击"></a>DOS攻击</h3><h3 id="DDOS攻击-1"><a href="#DDOS攻击-1" class="headerlink" title="DDOS攻击"></a>DDOS攻击</h3><h3 id="memcached为什么可以导致DDos攻击"><a href="#memcached为什么可以导致DDos攻击" class="headerlink" title="memcached为什么可以导致DDos攻击"></a>memcached为什么可以导致DDos攻击</h3><h3 id="什么是反射型DDoS"><a href="#什么是反射型DDoS" class="headerlink" title="什么是反射型DDoS"></a>什么是反射型DDoS</h3><h3 id="如何通过Hash碰撞进行DOS攻击"><a href="#如何通过Hash碰撞进行DOS攻击" class="headerlink" title="如何通过Hash碰撞进行DOS攻击"></a>如何通过Hash碰撞进行DOS攻击</h3><h3 id="SSL、TLS，HTTPS"><a href="#SSL、TLS，HTTPS" class="headerlink" title="SSL、TLS，HTTPS"></a>SSL、TLS，HTTPS</h3><h3 id="脱库、洗库、撞库"><a href="#脱库、洗库、撞库" class="headerlink" title="脱库、洗库、撞库"></a>脱库、洗库、撞库</h3><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-04-17T12:18:51.794Z" itemprop="dateUpdated">2020-04-17 20:18:51</time>
+</span>
+
+
+        
+        原文链接：<a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" target="_blank" rel="external">www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='www.aabigale.top'">
+            <img src="/img/avatar.jpg" alt="Aabigale">
+            <a>Aabigale</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&title=《Java学习之高级篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&title=《Java学习之高级篇》 — Aabigale's blog&source=高级篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之高级篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%9B%E9%98%B6%E7%AF%87/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Java学习之进阶篇">下一篇：Java学习之进阶篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2020
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="www.aabigale.top">tomotoes.com</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license">This blog is licensed under a <a rel="license noopener" rel="external nofollow noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&title=《Java学习之高级篇》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&title=《Java学习之高级篇》 — Aabigale's blog&source=高级篇" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java学习之高级篇》 — Aabigale's blog&url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/04/17/Java%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E7%BA%A7%E7%AF%87/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADLUlEQVR42u3awW7bQAwE0Pz/T7tATwWayDNLGbXZp5Nhy9I+GciE5H59xcfj99F++vjjyK/z93F9x+trjg5sbGzsD2E/Lo+fAPl3r5c7P//6nB+vj42Njb2OnYdEfsvrc5JPk7BMwgwbGxsbO4m0sxBqw2++BmxsbGzsSROqjZ/r4ucfBBg2Njb2G7OTplIbKvmnE8bLe2nY2NjYb89uA+mdX79wvo2NjY39luzH0TFvGL0i5Iq7YGNjYy9it9to8u01+Uaf62Q5W1VUSmFjY2OvYE820EzwLbt9iE8eGTY2NvY6dtL0n48Tknfax53c8UkRgo2Njb2C3Y5p5yOEScnRDnS/WQk2Njb2InaylHbTZLvodtPn9XdzETY2NvYOdl5s5BdtR7B5IfHk18sbW9jY2NhL2W0InQVPMX8+Cr86wLCxsbE/nD1v+pzF29kV7mppYWNjY29iJzfOA6ZtPOX3OntwP76DjY2NvYh91vqfbO5px8CTkqkoRbCxsbE/lp3/u9+WEGcT1XvPfxJd2NjY2IvYd4XN6wqPtux5Eq7Y2NjYi9jFH/2jRU/udfbderSAjY2NvYLdlhZ57M1Li/zubXGFjY2NvYPdxk+7iPbMs+ZUPdjAxsbGXsfOY+BsktxeefL6cCqCjY2NvYjdjnLz5k5b/Jy1+6MVYmNjY69jn/Vb7oq0ux5HUfZgY2Njr2PfFUt5A6g9p211RTuVsLGxsRexk3/r8zLgdQ+oDcInTSVsbGzsFewEcG/85GHTPqx2sIGNjY29g50MWfOlnA1u8xHFZIyBjY2NvZWdx1hyobMRbH7HNmhrMDY2NvYHstvWT8tur3zWhLq+wjfvY2NjYy9iz1tLyRaZswc32YI5OR8bGxv7s9iP8mjHwGcbJfP2U/ID1DMEbGxs7I9inzWY8kZ8u6C6bCgDEhsbG3srux2ytvEzOT9vTrUrxMbGxt7HPhu73lsY3Jy6SR2GjY2N/V+y85Z9vilzUroka7ghwLCxsbFXsO8NuXZTTs6LBsPY2NjY69jtMLXdvjP51l1xOOqlYWNjY78x+xXD1LaF1EbRZCyBjY2NvYj9C+JJRSjzk1QOAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2020/03/10");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "Aabigale");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>
