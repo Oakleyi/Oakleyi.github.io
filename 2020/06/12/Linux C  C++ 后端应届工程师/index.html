@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Linux C  C++ 后端应届工程师 | Aabigale&#39;s blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="Linux C &#x2F; C++ 后端应届工程师">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux C  C++ 后端应届工程师">
+<meta property="og:url" content="www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/index.html">
+<meta property="og:site_name" content="Aabigale&#39;s blog">
+<meta property="og:description" content="Linux C &#x2F; C++ 后端应届工程师">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-12T01:37:31.872Z">
+<meta property="article:modified_time" content="2020-06-12T01:37:31.872Z">
+<meta property="article:author" content="Aabigale">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Aabigale&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">Aabigale</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:447539854@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/oakleyi" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Linux C  C++ 后端应届工程师</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Linux-C-C-后端应届工程师"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux C &#x2F; C++ 后端应届工程师</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础知识以及-Linux-入门"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基础知识以及 Linux 入门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一阶段：2-3个月"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">第一阶段：2~3个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扎实算法和数据结构，刷LeetCode，刷出最优解"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">扎实算法和数据结构，刷LeetCode，刷出最优解</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扎实C语言："><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">扎实C语言：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基本数据结构，"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">基本数据结构，</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针"><span class="post-toc-number">1.1.1.4.</span> <span class="post-toc-text">指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二阶段：2-3个月"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">第二阶段：2~3个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OO思想，用函数指针去搞定OO思想"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">OO思想，用函数指针去搞定OO思想</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linux入门，几个常用命令，调试手段等"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">Linux入门，几个常用命令，调试手段等</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linux-c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">Linux c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三阶段：2-3个月"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">第三阶段：2~3个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#学会封装思维，接口思维，多态思维等等"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">学会封装思维，接口思维，多态思维等等</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#C-入门，掌握C-with-class，C-的OOP-两者的区别以及联系"><span class="post-toc-number">1.1.3.2.</span> <span class="post-toc-text">C++入门，掌握C with class，C++的OOP,两者的区别以及联系</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用Linux-C-将第二阶段的项目重写一遍"><span class="post-toc-number">1.1.3.3.</span> <span class="post-toc-text">使用Linux C++将第二阶段的项目重写一遍</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第二大阶段：造轮子的能力"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">第二大阶段：造轮子的能力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一阶段：2-3个月-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">第一阶段：2~3个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基础版高并发服务器，参考libevent、muduo等"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">基础版高并发服务器，参考libevent、muduo等</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多线程、多进程、以及IO多路复用"><span class="post-toc-number">1.2.1.2.</span> <span class="post-toc-text">多线程、多进程、以及IO多路复用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#线程池、内存池的实现，为服务器增加组件"><span class="post-toc-number">1.2.1.3.</span> <span class="post-toc-text">线程池、内存池的实现，为服务器增加组件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#日志组件"><span class="post-toc-number">1.2.1.4.</span> <span class="post-toc-text">日志组件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消息队列–做限流削峰"><span class="post-toc-number">1.2.1.5.</span> <span class="post-toc-text">消息队列–做限流削峰</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二阶段：系统学习操作系统与分布式系统"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">第二阶段：系统学习操作系统与分布式系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、编写小型操作系统：参考清华大学操作系统课程的ucore-扎扎实实2-3个月"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">1、编写小型操作系统：参考清华大学操作系统课程的ucore 扎扎实实2~3个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-深入理解计算机系统（链接、装载那必须好好看）"><span class="post-toc-number">1.2.2.1.1.</span> <span class="post-toc-text">a)深入理解计算机系统（链接、装载那必须好好看）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、编写分布式系统：参考资料MIT的6-824课程，刷raft的论文，扎实搞2-3个月"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">2、编写分布式系统：参考资料MIT的6.824课程，刷raft的论文，扎实搞2~3个月</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三大阶段：培养阅读源码的能力"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">第三大阶段：培养阅读源码的能力</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一阶段：3-4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">第一阶段：3~4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二阶段：1个月"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">第二阶段：1个月</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linux内核相关特性"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">Linux内核相关特性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）"><span class="post-toc-number">1.3.2.2.</span> <span class="post-toc-text">进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进程和内存相关数据结构"><span class="post-toc-number">1.3.2.3.</span> <span class="post-toc-text">进程和内存相关数据结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内核slab链表细节，常见的slab子项（例如task-struck，file-struct等等）"><span class="post-toc-number">1.3.2.4.</span> <span class="post-toc-text">内核slab链表细节，常见的slab子项（例如task_struck，file_struct等等）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#五种IO模型，以及等待队列的意义"><span class="post-toc-number">1.3.2.5.</span> <span class="post-toc-text">五种IO模型，以及等待队列的意义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#select、poll、epoll之间的区别，以及内核实现"><span class="post-toc-number">1.3.2.6.</span> <span class="post-toc-text">select、poll、epoll之间的区别，以及内核实现</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第四大阶段：-到这里，如果进展顺利的话，大概刚刚才到大三"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">第四大阶段： 到这里，如果进展顺利的话，大概刚刚才到大三</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#总结复习已有知识，查漏补缺"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">总结复习已有知识，查漏补缺</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#完善高并发服务器，改为分布式服务器"><span class="post-toc-number">1.4.0.2.</span> <span class="post-toc-text">完善高并发服务器，改为分布式服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#学会使用几个RPC组件，学会protobuf的使用等等"><span class="post-toc-number">1.4.0.3.</span> <span class="post-toc-text">学会使用几个RPC组件，学会protobuf的使用等等</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#学习设计模式的思维"><span class="post-toc-number">1.4.0.4.</span> <span class="post-toc-text">学习设计模式的思维</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#学习架构思维：-推荐：《大数据日知录》"><span class="post-toc-number">1.4.0.5.</span> <span class="post-toc-text">学习架构思维： 推荐：《大数据日知录》</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单机-gt-多机"><span class="post-toc-number">1.4.0.6.</span> <span class="post-toc-text">单机-&gt;多机</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分层思维"><span class="post-toc-number">1.4.0.7.</span> <span class="post-toc-text">分层思维</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#高级数据结构知识的掌握：10-20天"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">高级数据结构知识的掌握：10~20天</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#红黑树（记住特性即可）"><span class="post-toc-number">1.5.0.1.</span> <span class="post-toc-text">红黑树（记住特性即可）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#B-tree、LSM-tree、跳表、布隆过滤器等等"><span class="post-toc-number">1.5.0.2.</span> <span class="post-toc-text">B-tree、LSM tree、跳表、布隆过滤器等等</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-Linux C  C++ 后端应届工程师"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Linux C  C++ 后端应届工程师</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2020-06-12 09:37:31" datetime="2020-06-12T01:37:31.872Z"  itemprop="datePublished">2020-06-12</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Linux-C-C-后端应届工程师"><a href="#Linux-C-C-后端应届工程师" class="headerlink" title="Linux C / C++ 后端应届工程师"></a>Linux C / C++ 后端应届工程师</h1><a id="more"></a>
+
+<h2 id="基础知识以及-Linux-入门"><a href="#基础知识以及-Linux-入门" class="headerlink" title="基础知识以及 Linux 入门"></a>基础知识以及 Linux 入门</h2><h3 id="第一阶段：2-3个月"><a href="#第一阶段：2-3个月" class="headerlink" title="第一阶段：2~3个月"></a>第一阶段：2~3个月</h3><h4 id="扎实算法和数据结构，刷LeetCode，刷出最优解"><a href="#扎实算法和数据结构，刷LeetCode，刷出最优解" class="headerlink" title="扎实算法和数据结构，刷LeetCode，刷出最优解"></a>扎实算法和数据结构，刷LeetCode，刷出最优解</h4><h4 id="扎实C语言："><a href="#扎实C语言：" class="headerlink" title="扎实C语言："></a>扎实C语言：</h4><h4 id="基本数据结构，"><a href="#基本数据结构，" class="headerlink" title="基本数据结构，"></a>基本数据结构，</h4><h4 id="指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针"><a href="#指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针" class="headerlink" title="指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针"></a>指针：指针、指针步长、为啥能够通过指针找到对应数据、函数指针</h4><h3 id="第二阶段：2-3个月"><a href="#第二阶段：2-3个月" class="headerlink" title="第二阶段：2~3个月"></a>第二阶段：2~3个月</h3><h4 id="OO思想，用函数指针去搞定OO思想"><a href="#OO思想，用函数指针去搞定OO思想" class="headerlink" title="OO思想，用函数指针去搞定OO思想"></a>OO思想，用函数指针去搞定OO思想</h4><h4 id="Linux入门，几个常用命令，调试手段等"><a href="#Linux入门，几个常用命令，调试手段等" class="headerlink" title="Linux入门，几个常用命令，调试手段等"></a>Linux入门，几个常用命令，调试手段等</h4><h4 id="Linux-c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程"><a href="#Linux-c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程" class="headerlink" title="Linux c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程"></a>Linux c编程入门，多线程、多进程、内存管理、网络编程等等，Unix环境高级编程</h4><h3 id="第三阶段：2-3个月"><a href="#第三阶段：2-3个月" class="headerlink" title="第三阶段：2~3个月"></a>第三阶段：2~3个月</h3><h4 id="学会封装思维，接口思维，多态思维等等"><a href="#学会封装思维，接口思维，多态思维等等" class="headerlink" title="学会封装思维，接口思维，多态思维等等"></a>学会封装思维，接口思维，多态思维等等</h4><h4 id="C-入门，掌握C-with-class，C-的OOP-两者的区别以及联系"><a href="#C-入门，掌握C-with-class，C-的OOP-两者的区别以及联系" class="headerlink" title="C++入门，掌握C with class，C++的OOP,两者的区别以及联系"></a>C++入门，掌握C with class，C++的OOP,两者的区别以及联系</h4><h4 id="使用Linux-C-将第二阶段的项目重写一遍"><a href="#使用Linux-C-将第二阶段的项目重写一遍" class="headerlink" title="使用Linux C++将第二阶段的项目重写一遍"></a>使用Linux C++将第二阶段的项目重写一遍</h4><h2 id="第二大阶段：造轮子的能力"><a href="#第二大阶段：造轮子的能力" class="headerlink" title="第二大阶段：造轮子的能力"></a>第二大阶段：造轮子的能力</h2><h3 id="第一阶段：2-3个月-1"><a href="#第一阶段：2-3个月-1" class="headerlink" title="第一阶段：2~3个月"></a>第一阶段：2~3个月</h3><h4 id="基础版高并发服务器，参考libevent、muduo等"><a href="#基础版高并发服务器，参考libevent、muduo等" class="headerlink" title="基础版高并发服务器，参考libevent、muduo等"></a>基础版高并发服务器，参考libevent、muduo等</h4><h4 id="多线程、多进程、以及IO多路复用"><a href="#多线程、多进程、以及IO多路复用" class="headerlink" title="多线程、多进程、以及IO多路复用"></a>多线程、多进程、以及IO多路复用</h4><h4 id="线程池、内存池的实现，为服务器增加组件"><a href="#线程池、内存池的实现，为服务器增加组件" class="headerlink" title="线程池、内存池的实现，为服务器增加组件"></a>线程池、内存池的实现，为服务器增加组件</h4><h4 id="日志组件"><a href="#日志组件" class="headerlink" title="日志组件"></a>日志组件</h4><h4 id="消息队列–做限流削峰"><a href="#消息队列–做限流削峰" class="headerlink" title="消息队列–做限流削峰"></a>消息队列–做限流削峰</h4><h3 id="第二阶段：系统学习操作系统与分布式系统"><a href="#第二阶段：系统学习操作系统与分布式系统" class="headerlink" title="第二阶段：系统学习操作系统与分布式系统"></a>第二阶段：系统学习操作系统与分布式系统</h3><h4 id="1、编写小型操作系统：参考清华大学操作系统课程的ucore-扎扎实实2-3个月"><a href="#1、编写小型操作系统：参考清华大学操作系统课程的ucore-扎扎实实2-3个月" class="headerlink" title="1、编写小型操作系统：参考清华大学操作系统课程的ucore 扎扎实实2~3个月"></a>1、编写小型操作系统：参考清华大学操作系统课程的ucore 扎扎实实2~3个月</h4><h5 id="a-深入理解计算机系统（链接、装载那必须好好看）"><a href="#a-深入理解计算机系统（链接、装载那必须好好看）" class="headerlink" title="a)深入理解计算机系统（链接、装载那必须好好看）"></a>a)深入理解计算机系统（链接、装载那必须好好看）</h5><h4 id="2、编写分布式系统：参考资料MIT的6-824课程，刷raft的论文，扎实搞2-3个月"><a href="#2、编写分布式系统：参考资料MIT的6-824课程，刷raft的论文，扎实搞2-3个月" class="headerlink" title="2、编写分布式系统：参考资料MIT的6.824课程，刷raft的论文，扎实搞2~3个月"></a>2、编写分布式系统：参考资料MIT的6.824课程，刷raft的论文，扎实搞2~3个月</h4><h2 id="第三大阶段：培养阅读源码的能力"><a href="#第三大阶段：培养阅读源码的能力" class="headerlink" title="第三大阶段：培养阅读源码的能力"></a>第三大阶段：培养阅读源码的能力</h2><h3 id="第一阶段：3-4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）"><a href="#第一阶段：3-4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）" class="headerlink" title="第一阶段：3~4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）"></a>第一阶段：3~4个月，（需要学会利用已有资源，达到一个加速效果，比如一些博客和书籍）</h3><p>推荐Redis、Nginx、Rocksdb等等</p>
+<p>学会使用，以及懂源码原理</p>
+<p>这里推荐一个群：568892619</p>
+<p>在这个阶段，顺便实现协程</p>
+<p>需要关注的几个特性：栈自动扩容、HOOK机制等等</p>
+<h3 id="第二阶段：1个月"><a href="#第二阶段：1个月" class="headerlink" title="第二阶段：1个月"></a>第二阶段：1个月</h3><h4 id="Linux内核相关特性"><a href="#Linux内核相关特性" class="headerlink" title="Linux内核相关特性"></a>Linux内核相关特性</h4><h4 id="进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）"><a href="#进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）" class="headerlink" title="进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）"></a>进程调度过程、线程与进程的内核实现区别、内存管理（伙伴系统与slab系统）</h4><h4 id="进程和内存相关数据结构"><a href="#进程和内存相关数据结构" class="headerlink" title="进程和内存相关数据结构"></a>进程和内存相关数据结构</h4><h4 id="内核slab链表细节，常见的slab子项（例如task-struck，file-struct等等）"><a href="#内核slab链表细节，常见的slab子项（例如task-struck，file-struct等等）" class="headerlink" title="内核slab链表细节，常见的slab子项（例如task_struck，file_struct等等）"></a>内核slab链表细节，常见的slab子项（例如task_struck，file_struct等等）</h4><h4 id="五种IO模型，以及等待队列的意义"><a href="#五种IO模型，以及等待队列的意义" class="headerlink" title="五种IO模型，以及等待队列的意义"></a>五种IO模型，以及等待队列的意义</h4><h4 id="select、poll、epoll之间的区别，以及内核实现"><a href="#select、poll、epoll之间的区别，以及内核实现" class="headerlink" title="select、poll、epoll之间的区别，以及内核实现"></a>select、poll、epoll之间的区别，以及内核实现</h4><h2 id="第四大阶段：-到这里，如果进展顺利的话，大概刚刚才到大三"><a href="#第四大阶段：-到这里，如果进展顺利的话，大概刚刚才到大三" class="headerlink" title="第四大阶段： 到这里，如果进展顺利的话，大概刚刚才到大三"></a>第四大阶段： 到这里，如果进展顺利的话，大概刚刚才到大三</h2><h4 id="总结复习已有知识，查漏补缺"><a href="#总结复习已有知识，查漏补缺" class="headerlink" title="总结复习已有知识，查漏补缺"></a>总结复习已有知识，查漏补缺</h4><h4 id="完善高并发服务器，改为分布式服务器"><a href="#完善高并发服务器，改为分布式服务器" class="headerlink" title="完善高并发服务器，改为分布式服务器"></a>完善高并发服务器，改为分布式服务器</h4><h4 id="学会使用几个RPC组件，学会protobuf的使用等等"><a href="#学会使用几个RPC组件，学会protobuf的使用等等" class="headerlink" title="学会使用几个RPC组件，学会protobuf的使用等等"></a>学会使用几个RPC组件，学会protobuf的使用等等</h4><h4 id="学习设计模式的思维"><a href="#学习设计模式的思维" class="headerlink" title="学习设计模式的思维"></a>学习设计模式的思维</h4><h4 id="学习架构思维：-推荐：《大数据日知录》"><a href="#学习架构思维：-推荐：《大数据日知录》" class="headerlink" title="学习架构思维： 推荐：《大数据日知录》"></a>学习架构思维： 推荐：《大数据日知录》</h4><h4 id="单机-gt-多机"><a href="#单机-gt-多机" class="headerlink" title="单机->多机"></a>单机-&gt;多机</h4><h4 id="分层思维"><a href="#分层思维" class="headerlink" title="分层思维"></a>分层思维</h4><h2 id="高级数据结构知识的掌握：10-20天"><a href="#高级数据结构知识的掌握：10-20天" class="headerlink" title="高级数据结构知识的掌握：10~20天"></a>高级数据结构知识的掌握：10~20天</h2><h4 id="红黑树（记住特性即可）"><a href="#红黑树（记住特性即可）" class="headerlink" title="红黑树（记住特性即可）"></a>红黑树（记住特性即可）</h4><h4 id="B-tree、LSM-tree、跳表、布隆过滤器等等"><a href="#B-tree、LSM-tree、跳表、布隆过滤器等等" class="headerlink" title="B-tree、LSM tree、跳表、布隆过滤器等等"></a>B-tree、LSM tree、跳表、布隆过滤器等等</h4><p>去整理一下大厂常见面试题，刷好面经，整理好简历，一直到大三的寒假，开始投递简历，大三下出去实习，以现在的实力，只要进了面试，基本上不会被刷，去名企。</p>
+<p>实习到7、8月份左右，出来，开始参加秋招，把以前的知识再好好复习一遍，即将开启offer收割之路</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-06-12T01:37:31.872Z" itemprop="dateUpdated">2020-06-12 09:37:31</time>
+</span>
+
+
+        
+        原文链接：<a href="/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/" target="_blank" rel="external">www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='www.aabigale.top'">
+            <img src="/img/avatar.jpg" alt="Aabigale">
+            <a>Aabigale</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&title=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&title=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&source=Linux C / C++ 后端应届工程师" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/07/13/Python%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-----Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E7%94%A8/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：Python深度学习-----Python机器学习应用
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/05/09/Java%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：Java 数据结构和算法">下一篇：Java 数据结构和算法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2020
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="www.aabigale.top">tomotoes.com</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license">This blog is licensed under a <a rel="license noopener" rel="external nofollow noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&title=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&pic=www.aabigale.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&title=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&source=Linux C / C++ 后端应届工程师" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux C  C++ 后端应届工程师》 — Aabigale's blog&url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/&via=www.aabigale.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=www.aabigale.top/2020/06/12/Linux%20C%20%20C++%20%E5%90%8E%E7%AB%AF%E5%BA%94%E5%B1%8A%E5%B7%A5%E7%A8%8B%E5%B8%88/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD9UlEQVR42u3bS3LbQAwFQN3/0k4lq6Qcke8BQyWL5splycOZ5gLEx69XfH39un7/+d1vvn/6bp380+s1r3f1euLCgQMHDhzBUa+P9H3pHOXdOtffSa79A/sLGQ4cOHDgOMSRBNc8ZLabmIXSliMK7Thw4MCB44McG4J8zVmqloReHDhw4MDxv3Fc/9V1+MxLde1jmO0fBw4cOHA8zZEEyDbQ5kfN20V5qfHxWikOHDhw4OjiXbGJ///nx+c7cODAgQNHOTowGy/Ixw7arbcjF9H+ceDAgQPHmqNNz5Ky4Kz9s7lvm3ze7AEHDhw4cCw4klCXDxzkxcScrKWccb9978CBAwcOHAuOpBU0Gy9oW0Fteyl/JDf7x4EDBw4ca478xu2ns7C32Uk+4oADBw4cOD7JkSdpG5Q8GLe4+avAzeQgDhw4cOAYcbRtm00x8YnBiDwJjNI8HDhw4MBxlCMv5OWFvzwc5kNvycHagiAOHDhw4DjFsVmoHVDLU7LN4N0m/cOBAwcOHM9xJIEtHyM4W8jLC5TDE+HAgQMHjkMceSEvh0gSvM29Zg/m5js4cODAgWPBMWvzzMYUZuMLCdxseOJtWRAHDhw4cDzAMRtQaBtRs1bW7O44cODAgeOTHEVLJmggtcMKbYto1naKHicOHDhw4HiYYzM2dyokt5RtovjHyjhw4MCB4yhHXkRr2zmz9TcNp9n+ceDAgQPHnmMTqNpmUhto8wPMXhTq4I0DBw4cOEqOTYLUHnhfgjy185t3EBw4cODAMeKYJVpnA1sezpMwn6eUOHDgwIHjOY586c+UF/djE8PkEAcOHDhwnKyzrf7hZzOOkIfwPG07Vh/FgQMHDhxlb2V2s30qtT/YMHxev3HgwIEDB441xyzdut5cUpJrQ/s+dbxBwYEDBw4chzjyUJcfLEE8FT7bb0bvHThw4MCBY8SxCaVnB+DykN/upA7DOHDgwIFjwTErDrbjaPsm0yxdTF4R3qZwOHDgwIFjwZGnQ3kiNyzPXX6/TTXrZBIHDhw4cBzimBX7krA6C8OzfGoThl/JFnHgwIEDR8wxC1p56yhfbbOTTbkQBw4cOHCc4pgV4/LAvG9H5d2z2R2LLhwOHDhw4Aju8lVe+xGEPElr77IP5Dhw4MCBY88xC0gzjlOBc5NAJuvgwIEDB449Rx5ck821281bVu3gQnsWHDhw4MBxliMJrrOWUjKytgntszTsJtDiwIEDB45/ytEOQMyCaN6aaikPB1ocOHDgwBFz5CMOs3GHtgE2G4C42QkOHDhw4DjE0Q4xzDa0H5XImZIwvKqV4sCBAweOxbUZHZiNROTHy18FHpzvwIEDBw4cP68ftYM0NqDeTkcAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2020/03/10");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "Aabigale");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>
